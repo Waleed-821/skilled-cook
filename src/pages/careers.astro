@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بوابة التوظيف | الطباخ الماهر</title>
+    <meta name="description" content="بوابة التوظيف في شركة الطباخ الماهر لخدمات الإعاشة." />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="/" class="logo">
+        <img src="/images/new%20logo.png" alt="شعار الطباخ الماهر" />
+        <span>
+          <strong>شركة الطباخ الماهر لخدمات الإعاشة</strong>
+          <small>SKILLED COOK</small>
+        </span>
+      </a>
+      <a href="/" class="back-link">العودة للرئيسية</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">انضم إلى فريقنا</p>
+          <h1>بوابة <span>التوظيف</span></h1>
+          <p class="description">
+            نبحث عن الكفاءات والكوادر الطموحة للانضمام إلى فريق شركة الطباخ
+            الماهر لخدمات الإعاشة. يرجى تعبئة البيانات التالية بدقة.
+          </p>
+        </div>
+      </section>
+
+      <section class="application">
+        <div class="form-heading">
+          <h2>استمارة طلب توظيف</h2>
+          <p>يرجى إدخال جميع البيانات المطلوبة</p>
+        </div>
+
+        <form id="jobForm">
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="fullName">الاسم الكامل <span>*</span></label>
+              <input id="fullName" name="fullName" type="text"
+                placeholder="أدخل الاسم الكامل" required />
+            </div>
+
+            <div class="field">
+              <label for="idNumber">رقم الهوية / الإقامة <span>*</span></label>
+              <input id="idNumber" name="idNumber" type="text"
+                placeholder="أدخل رقم الهوية أو الإقامة" required />
+            </div>
+
+            <div class="field">
+              <label for="nationality">الجنسية <span>*</span></label>
+              <select id="nationality" name="nationality" required>
+                <option value="">اختر الجنسية</option>
+                <option value="السعودية">السعودية</option>
+                <option value="ميانمار">ميانمار</option>
+                <option value="اليمن">اليمن</option>
+                <option value="مصر">مصر</option>
+                <option value="السودان">السودان</option>
+                <option value="النيجر">النيجر</option>
+                <option value="نيجيريا">نيجيريا</option>
+                <option value="مالي">مالي</option>
+                <option value="تشاد">تشاد</option>
+                <option value="other">غير ذلك</option>
+              </select>
+            </div>
+
+            <div class="field" id="otherNationalityField" hidden>
+              <label for="otherNationality">يرجى إدخال الجنسية <span>*</span></label>
+              <input id="otherNationality" name="otherNationality"
+                type="text" placeholder="اكتب جنسيتك" disabled />
+            </div>
+
+            <div class="field">
+              <label for="occupation">المهنة في الهوية <span>*</span></label>
+              <input id="occupation" name="occupation" type="text"
+                placeholder="أدخل المهنة المسجلة في الهوية أو الإقامة" required />
+            </div>
+
+            <div class="field">
+              <label for="age">العمر <span>*</span></label>
+              <input id="age" name="age" type="number" min="18" max="100"
+                placeholder="أدخل العمر" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">رقم الجوال <span>*</span></label>
+              <input id="phone" name="phone" type="tel"
+                placeholder="أدخل رقم الجوال" required />
+            </div>
+
+            <div class="field full">
+              <label>هل سبق لك العمل في مطابخ الإعاشة؟ <span>*</span></label>
+              <div class="radio-options">
+                <label>
+                  <input type="radio" name="experience" value="نعم" required />
+                  نعم
+                </label>
+                <label>
+                  <input type="radio" name="experience" value="لا" />
+                  لا
+                </label>
+              </div>
+            </div>
+
+            <div class="field full">
+              <label>هل يمكنك توفير عقد أجير؟ <span>*</span></label>
+              <div class="radio-options">
+                <label>
+                  <input type="radio" name="ajeer" value="نعم" required />
+                  نعم
+                </label>
+                <label>
+                  <input type="radio" name="ajeer" value="لا" />
+                  لا
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="myanmarFields" class="conditional-fields" hidden>
+            <h3>بيانات إضافية للمتقدمين من ميانمار</h3>
+
+            <div class="field">
+              <label>هل أنت ميانمار بجواز أم ميانمار مقيم؟ <span>*</span></label>
+              <div class="radio-options">
+                <label>
+                  <input type="radio" name="myanmarStatus"
+                    value="ميانمار بجواز" disabled />
+                  ميانمار بجواز
+                </label>
+                <label>
+                  <input type="radio" name="myanmarStatus"
+                    value="ميانمار مقيم" disabled />
+                  ميانمار مقيم
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="upload-section">
+            <label for="identityPhoto">صورة الهوية أو الإقامة <span>*</span></label>
+            <p>ارفع صورة واضحة للهوية بصيغة صورة.</p>
+            <input id="identityPhoto" name="identityPhoto"
+              type="file" accept="image/*" required />
+
+            <div id="previewContainer" hidden>
+              <img id="imagePreview" alt="معاينة صورة الهوية" />
+              <button type="button" id="removeImage">إزالة الصورة</button>
+            </div>
+          </div>
+
+          <div class="privacy-note">
+            هذه استمارة تجريبية. لن يتم إرسال بياناتك أو حفظها في الوقت الحالي.
+          </div>
+
+          <button type="submit" class="submit-button">
+            إرسال طلب التوظيف
+          </button>
+
+          <p id="formMessage" class="form-message" role="status" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      شركة الطباخ الماهر لخدمات الإعاشة
+      <p>الطباخ الماهر .. طبخ ماهر بكل المواسم</p>
+    </footer>
+
+    <script>
+      const nationality = document.querySelector("#nationality");
+      const otherField = document.querySelector("#otherNationalityField");
+      const otherInput = document.querySelector("#otherNationality");
+      const myanmarFields = document.querySelector("#myanmarFields");
+      const myanmarInputs = myanmarFields.querySelectorAll("input");
+
+      const photoInput = document.querySelector("#identityPhoto");
+      const previewContainer = document.querySelector("#previewContainer");
+      const imagePreview = document.querySelector("#imagePreview");
+      const removeImage = document.querySelector("#removeImage");
+
+      const form = document.querySelector("#jobForm");
+      const formMessage = document.querySelector("#formMessage");
+
+      let imageUrl = null;
+
+      nationality.addEventListener("change", () => {
+        const isOther = nationality.value === "other";
+        const isMyanmar = nationality.value === "ميانمار";
+
+        otherField.hidden = !isOther;
+        otherInput.disabled = !isOther;
+        otherInput.required = isOther;
+
+        myanmarFields.hidden = !isMyanmar;
+
+        myanmarInputs.forEach((input) => {
+          input.disabled = !isMyanmar;
+          input.required = isMyanmar;
+
+          if (!isMyanmar) {
+            input.checked = false;
+          }
+        });
+
+        if (!isOther) {
+          otherInput.value = "";
+        }
+      });
+
+      photoInput.addEventListener("change", () => {
+        const file = photoInput.files?.[0];
+
+        if (imageUrl) {
+          URL.revokeObjectURL(imageUrl);
+          imageUrl = null;
+        }
+
+        previewContainer.hidden = true;
+        imagePreview.removeAttribute("src");
+
+        if (!file) return;
+
+        if (!file.type.startsWith("image/")) {
+          photoInput.value = "";
+          alert("يرجى اختيار ملف صورة.");
+          return;
+        }
+
+        imageUrl = URL.createObjectURL(file);
+        imagePreview.src = imageUrl;
+        previewContainer.hidden = false;
+      });
+
+      removeImage.addEventListener("click", () => {
+        if (imageUrl) {
+          URL.revokeObjectURL(imageUrl);
+          imageUrl = null;
+        }
+
+        photoInput.value = "";
+        imagePreview.removeAttribute("src");
+        previewContainer.hidden = true;
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        formMessage.textContent =
+          "اكتملت معاينة البيانات، لكن هذه نسخة تجريبية ولا يتم إرسال الطلب أو حفظه. سيتم تفعيل الإرسال بعد تجهيز نظام الاستقبال.";
+
+        formMessage.hidden = false;
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #111111;
+    color: #f5f0e8;
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.8;
+  }
+
+  .header {
+    min-height: 95px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #c69a5540;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 65px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  .logo span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo strong {
+    color: #c69a55;
+    font-size: 16px;
+  }
+
+  .logo small {
+    color: white;
+    letter-spacing: 2px;
+  }
+
+  .back-link {
+    color: #e7c58d;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 340px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(110deg, #111111, #292016);
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .eyebrow {
+    color: #c69a55;
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.35;
+    margin: 10px 0;
+  }
+
+  h1 span {
+    color: #c69a55;
+  }
+
+  .description {
+    color: #d0c8bc;
+    font-size: 17px;
+    max-width: 620px;
+  }
+
+  .application {
+    max-width: 1000px;
+    margin: 55px auto;
+    padding: 0 25px;
+  }
+
+  .form-heading {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .form-heading h2 {
+    color: #c69a55;
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  .form-heading p {
+    color: #b8aa97;
+    margin-top: 0;
+  }
+
+  #jobForm {
+    background: #1c1c1c;
+    border: 1px solid #c69a5540;
+    border-radius: 14px;
+    padding: 35px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
+  }
+
+  .field.full {
+    grid-column: 1 / -1;
+  }
+
+  .field label,
+  .upload-section > label {
+    font-weight: 700;
+    color: #f5f0e8;
+  }
+
+  .field label span,
+  .upload-section label span {
+    color: #e4a85b;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 15px;
+    border: 1px solid #66543d;
+    border-radius: 7px;
+    background: #121212;
+    color: #f5f0e8;
+    font-family: inherit;
+    font-size: 14px;
+  }
+
+  input::placeholder {
+    color: #938a7e;
+  }
+
+  input:focus,
+  select:focus {
+    outline: 2px solid #c69a55;
+    border-color: transparent;
+  }
+
+  .radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 12px 15px;
+    background: #141414;
+    border: 1px solid #66543d;
+    border-radius: 7px;
+  }
+
+  .radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .radio-options input {
+    accent-color: #c69a55;
+    width: 17px;
+    height: 17px;
+  }
+
+  .conditional-fields {
+    margin-top: 25px;
+    padding: 25px;
+    border: 1px solid #c69a5570;
+    border-radius: 10px;
+    background: #292016;
+  }
+
+  .conditional-fields h3 {
+    color: #c69a55;
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+
+  .upload-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #ffffff20;
+  }
+
+  .upload-section p {
+    color: #b8aa97;
+    font-size: 13px;
+  }
+
+  input[type="file"] {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    border: 1px dashed #c69a55;
+    border-radius: 7px;
+    background: #141414;
+    color: #d8c7ad;
+    font-family: inherit;
+  }
+
+  #previewContainer {
+    margin-top: 20px;
+  }
+
+  #imagePreview {
+    display: block;
+    max-width: 240px;
+    max-height: 260px;
+    object-fit: contain;
+    border: 1px solid #c69a55;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  #removeImage {
+    border: 1px solid #bd6c5a;
+    color: #e6a395;
+    background: transparent;
+    border-radius: 5px;
+    padding: 7px 15px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .privacy-note {
+    margin-top: 25px;
+    padding: 15px;
+    background: #292016;
+    color: #e7c58d;
+    border-right: 3px solid #c69a55;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  .submit-button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    background: #c69a55;
+    color: #17120c;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .submit-button:hover {
+    background: #e0b875;
+    transform: translateY(-2px);
+  }
+
+  .form-message {
+    padding: 15px;
+    background: #292016;
+    color: #e7c58d;
+    border-radius: 7px;
+    text-align: center;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+    color: #c69a55;
+    border-top: 1px solid #c69a5540;
+  }
+
+  footer p {
+    color: #b8aa97;
+    font-size: 13px;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @media (max-width: 650px) {
+    .header {
+      padding: 12px 5%;
+    }
+
+    .logo strong {
+      font-size: 12px;
+    }
+
+    .logo img {
+      width: 50px;
+    }
+
+    .back-link {
+      font-size: 12px;
+    }
+
+    .hero {
+      padding: 55px 6%;
+    }
+
+    .description {
+      font-size: 15px;
+    }
+
+    .application {
+      margin: 35px auto;
+      padding: 0 15px;
+    }
+
+    #jobForm {
+      padding: 22px 16px;
+    }
+
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .field.full {
+      grid-column: auto;
+    }
+
+    .conditional-fields {
+      padding: 18px;
+    }
+
+    .form-heading h2 {
+      font-size: 25px;
+    }
+  }
+</style>

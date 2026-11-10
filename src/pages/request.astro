@@ -1,0 +1,457 @@
+
+---
+---
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>طلب خدمة | الطباخ الماهر</title>
+  <meta name="description" content="اطلب خدمات شركة الطباخ الماهر لخدمات الإعاشة." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #171717;
+      color: #f7f3eb;
+    }
+
+    header {
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #383127;
+      background: #111;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #d6b477;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .logo img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+
+    .logo small {
+      display: block;
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .back-link {
+      color: #d6b477;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .page {
+      width: min(760px, 92%);
+      margin: 55px auto 80px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro span {
+      color: #d6b477;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(27px, 5vw, 38px);
+      margin: 8px 0;
+    }
+
+    .intro p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    form {
+      background: #222;
+      border: 1px solid #41382b;
+      border-radius: 16px;
+      padding: 30px;
+    }
+
+    .section-title {
+      color: #d6b477;
+      font-size: 19px;
+      margin: 0 0 18px;
+    }
+
+    .field {
+      margin-bottom: 23px;
+    }
+
+    label, .field-title {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #514638;
+      border-radius: 8px;
+      background: #171717;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #d6b477;
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+      width: auto;
+      accent-color: #d6b477;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .choice {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px;
+      border: 1px solid #514638;
+      border-radius: 8px;
+      background: #191919;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .choice label {
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .conditional {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .conditional.show {
+      display: block;
+    }
+
+    .delivery-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .delivery-options .choice {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .kitchen-link {
+      display: inline-block;
+      color: #e5c58c;
+      margin-top: 8px;
+      text-decoration: underline;
+    }
+
+    .hint {
+      color: #aaa;
+      font-size: 12px;
+      margin-top: 7px;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 10px;
+      border: 0;
+      border-radius: 8px;
+      background: #c9a66b;
+      color: #171717;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #e0c18b;
+    }
+
+    .notice {
+      display: none;
+      margin-top: 18px;
+      padding: 14px;
+      border: 1px solid #8a754d;
+      border-radius: 8px;
+      color: #e5c58c;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #999;
+      border-top: 1px solid #383127;
+      font-size: 12px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 9999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 4px 18px #0008;
+    }
+
+    .whatsapp svg {
+      width: 31px;
+      height: 31px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 13px 4%;
+      }
+
+      .logo {
+        font-size: 12px;
+      }
+
+      .logo img {
+        width: 43px;
+        height: 43px;
+      }
+
+      .back-link {
+        font-size: 12px;
+      }
+
+      form {
+        padding: 20px 15px;
+      }
+
+      .choices {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        margin-top: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="/" class="logo">
+      <img src="/images/new%20logo.png" alt="شعار الطباخ الماهر" />
+      <span>
+        شركة الطباخ الماهر لخدمات الإعاشة
+        <small>SKILLED COOK</small>
+      </span>
+    </a>
+    <a href="/" class="back-link">العودة للرئيسية ←</a>
+  </header>
+
+  <main class="page">
+    <div class="intro">
+      <span>SKILLED COOK</span>
+      <h1>اطلب خدمتك</h1>
+      <p>يسعدنا خدمتك، فضلاً أكمل البيانات التالية وسنتواصل معك.</p>
+    </div>
+
+    <form id="serviceForm">
+      <h2 class="section-title">تفاصيل الخدمة</h2>
+
+      <div class="field">
+        <span class="field-title">ما نوع الخدمة المطلوبة؟</span>
+        <div class="choices">
+          <div class="choice">
+            <input type="checkbox" id="slaughter" name="service" value="ذبائح ولائم" />
+            <label for="slaughter">ذبائح ولائم</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="buffet" name="service" value="بوفيهات" />
+            <label for="buffet">بوفيهات</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="events" name="service" value="مناسبات" />
+            <label for="events">مناسبات</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="meals" name="service" value="وجبات" />
+            <label for="meals">وجبات</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" id="other" name="service" value="غير ذلك" />
+            <label for="other">غير ذلك</label>
+          </div>
+        </div>
+
+        <div class="conditional" id="otherDetails">
+          <label for="otherDescription">يرجى وصف الخدمة المطلوبة</label>
+          <textarea id="otherDescription" rows="3" placeholder="اكتب تفاصيل الخدمة"></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="quantity">الكمية المطلوبة</label>
+        <input type="number" id="quantity" min="1" required placeholder="أدخل الكمية" />
+      </div>
+
+      <div class="field">
+        <label for="preparationDate">موعد التجهيز المطلوب</label>
+        <input type="datetime-local" id="preparationDate" required />
+      </div>
+
+      <hr style="border:0;border-top:1px solid #514638;margin:30px 0;" />
+
+      <h2 class="section-title">طريقة الاستلام</h2>
+
+      <div class="field">
+        <span class="field-title">كيف تفضل استلام الطلب؟</span>
+        <div class="delivery-options">
+          <div class="choice">
+            <input type="radio" id="delivery" name="deliveryMethod" value="توصيل" required />
+            <label for="delivery">توصيل إلى الموقع</label>
+          </div>
+          <div class="choice">
+            <input type="radio" id="pickup" name="deliveryMethod" value="استلام من المطبخ" />
+            <label for="pickup">استلام من المطبخ</label>
+          </div>
+        </div>
+
+        <div class="conditional" id="deliveryDetails">
+          <label for="customerLocation">موقع التوصيل</label>
+          <input type="url" id="customerLocation" placeholder="ضع رابط موقعك من خرائط Google" />
+          <p class="hint">افتح خرائط Google، واختر موقعك، ثم اضغط مشاركة وانسخ الرابط هنا.</p>
+        </div>
+
+        <div class="conditional" id="pickupDetails">
+          <p>يمكنك استلام طلبك من مطبخ الشركة عبر الموقع التالي:</p>
+          <a class="kitchen-link" href="https://share.google/ilRo0bmkkYCQS2mR4" target="_blank" rel="noopener noreferrer">
+            عرض موقع المطبخ على خرائط Google
+          </a>
+        </div>
+      </div>
+
+      <hr style="border:0;border-top:1px solid #514638;margin:30px 0;" />
+
+      <h2 class="section-title">بيانات التواصل</h2>
+
+      <div class="field">
+        <label for="phone">رقم الجوال</label>
+        <input type="tel" id="phone" required placeholder="05xxxxxxxx" />
+      </div>
+
+      <div class="field">
+        <label for="notes">ملاحظات إضافية (اختياري)</label>
+        <textarea id="notes" rows="4" placeholder="أي تفاصيل أخرى ترغب في إضافتها"></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">إرسال طلب الخدمة</button>
+
+      <div class="notice" id="notice">
+        هذه نسخة تجريبية من نموذج الطلب. لم يتم إرسال بياناتك أو حفظها حتى الآن.
+        سيتم تفعيل استقبال الطلبات بعد تجهيز نظام الإرسال.
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    شركة الطباخ الماهر لخدمات الإعاشة
+    <br />
+    الطباخ الماهر .. طبخ ماهر بكل المواسم
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/966557612821" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 3a12.8 12.8 0 0 0-10.9 19.5L3.5 29l6.7-1.7A12.9 12.9 0 1 0 16 3zm0 23.5c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 .9 1-3.9-.3-.4A10.3 10.3 0 1 1 16 26.5zm5.7-7.7c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.4 8.4 0 0 1-2.6-1.6 9.5 9.5 0 0 1-1.8-2.2c-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.4-.6.1-.2 0-.5 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a13.2 13.2 0 0 0 5.1 4.5c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+  </a>
+
+  <script>
+    const otherCheckbox = document.getElementById('other');
+    const otherDetails = document.getElementById('otherDetails');
+    const otherDescription = document.getElementById('otherDescription');
+
+    otherCheckbox.addEventListener('change', () => {
+      otherDetails.classList.toggle('show', otherCheckbox.checked);
+      otherDescription.required = otherCheckbox.checked;
+    });
+
+    const delivery = document.getElementById('delivery');
+    const pickup = document.getElementById('pickup');
+    const deliveryDetails = document.getElementById('deliveryDetails');
+    const pickupDetails = document.getElementById('pickupDetails');
+    const customerLocation = document.getElementById('customerLocation');
+
+    function updateDeliveryMethod() {
+      deliveryDetails.classList.toggle('show', delivery.checked);
+      pickupDetails.classList.toggle('show', pickup.checked);
+      customerLocation.required = delivery.checked;
+    }
+
+    delivery.addEventListener('change', updateDeliveryMethod);
+    pickup.addEventListener('change', updateDeliveryMethod);
+
+    const form = document.getElementById('serviceForm');
+    const notice = document.getElementById('notice');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!document.querySelector('input[name="service"]:checked')) {
+        alert('فضلاً اختر نوع الخدمة المطلوبة.');
+        return;
+      }
+
+      notice.style.display = 'block';
+      notice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    const dateInput = document.getElementById('preparationDate');
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    dateInput.min = now.toISOString().slice(0, 16);
+  </script>
+</body>
+</html>
