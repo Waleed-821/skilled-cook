@@ -55,19 +55,21 @@
 
             <div class="field">
               <label for="nationality">الجنسية <span>*</span></label>
-              <select id="nationality" name="nationality" required>
-                <option value="">اختر الجنسية</option>
-                <option value="السعودية">السعودية</option>
-                <option value="ميانمار">ميانمار</option>
-                <option value="اليمن">اليمن</option>
-                <option value="مصر">مصر</option>
-                <option value="السودان">السودان</option>
-                <option value="النيجر">النيجر</option>
-                <option value="نيجيريا">نيجيريا</option>
-                <option value="مالي">مالي</option>
-                <option value="تشاد">تشاد</option>
-                <option value="other">غير ذلك</option>
-              </select>
+          <select id="nationality" name="nationality" required>
+  <option value="">اختر الجنسية</option>
+  <option value="السعودية">السعودية</option>
+  <option value="بنجلاديش">بنجلاديش</option>
+  <option value="باكستان">باكستان</option>
+  <option value="ميانمار">ميانمار</option>
+  <option value="اليمن">اليمن</option>
+  <option value="مصر">مصر</option>
+  <option value="السودان">السودان</option>
+  <option value="النيجر">النيجر</option>
+  <option value="نيجيريا">نيجيريا</option>
+  <option value="مالي">مالي</option>
+  <option value="تشاد">تشاد</option>
+  <option value="other">غير ذلك</option>
+</select>
             </div>
 
             <div class="field" id="otherNationalityField" hidden>
@@ -108,18 +110,18 @@
               </div>
             </div>
 
-            <div class="field full">
-              <label>هل يمكنك توفير عقد أجير؟ <span>*</span></label>
-              <div class="radio-options">
-                <label>
-                  <input type="radio" name="ajeer" value="نعم" required />
-                  نعم
-                </label>
-                <label>
-                  <input type="radio" name="ajeer" value="لا" />
-                  لا
-                </label>
-              </div>
+            <div class="field full" id="ajeerField">
+  <label>هل يمكنك توفير عقد أجير؟ <span>*</span></label>
+  <div class="radio-options">
+    <label>
+      <input type="radio" name="ajeer" value="نعم" required />
+      نعم
+    </label>
+    <label>
+      <input type="radio" name="ajeer" value="لا" required />
+      لا
+    </label>
+</div>
             </div>
 
           </div>
@@ -180,6 +182,8 @@
       const otherInput = document.querySelector("#otherNationality");
       const myanmarFields = document.querySelector("#myanmarFields");
       const myanmarInputs = myanmarFields.querySelectorAll("input");
+      const ajeerField = document.querySelector("#ajeerField");
+const ajeerInputs = ajeerField.querySelectorAll('input[name="ajeer"]');
 
       const photoInput = document.querySelector("#identityPhoto");
       const previewContainer = document.querySelector("#previewContainer");
@@ -194,6 +198,19 @@
       nationality.addEventListener("change", () => {
         const isOther = nationality.value === "other";
         const isMyanmar = nationality.value === "ميانمار";
+        const isSaudi = nationality.value === "السعودية";
+        nationality.dispatchEvent(new Event("change"));
+
+ajeerField.hidden = isSaudi;
+
+ajeerInputs.forEach((input) => {
+  input.disabled = isSaudi;
+  input.required = !isSaudi;
+
+  if (isSaudi) {
+    input.checked = false;
+  }
+});
 
         otherField.hidden = !isOther;
         otherInput.disabled = !isOther;
@@ -312,7 +329,7 @@
 
   .logo small {
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
   }
 
   .back-link {
@@ -667,7 +684,7 @@
 
   .logo small {
     font-size: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
   }
 
   .back-link {

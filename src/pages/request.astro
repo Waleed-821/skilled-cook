@@ -12,9 +12,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -103,9 +101,7 @@
       margin: 0 0 18px;
     }
 
-    .field {
-      margin-bottom: 23px;
-    }
+    .field { margin-bottom: 23px; }
 
     label, .field-title {
       display: block;
@@ -133,6 +129,7 @@
     input[type="checkbox"], input[type="radio"] {
       width: auto;
       accent-color: #d6b477;
+      flex-shrink: 0;
     }
 
     .choices {
@@ -160,11 +157,65 @@
 
     .conditional {
       display: none;
-      margin-top: 15px;
+      margin-top: 18px;
     }
 
-    .conditional.show {
-      display: block;
+    .conditional.show { display: block; }
+
+    .sub-section {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid #514638;
+      border-radius: 10px;
+      background: #191919;
+    }
+
+    .sub-title {
+      color: #d6b477;
+      font-size: 16px;
+      font-weight: 800;
+      margin: 0 0 14px;
+    }
+
+    .cooking-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .cooking-item {
+      border: 1px solid #514638;
+      border-radius: 8px;
+      padding: 11px;
+      background: #222;
+    }
+
+    .cooking-item .choice {
+      border: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    .cooking-quantity {
+      display: none;
+      margin-top: 12px;
+    }
+
+    .cooking-quantity.show { display: block; }
+
+    .cooking-quantity label {
+      font-size: 12px;
+      color: #d6b477;
+    }
+
+    .cooking-quantity input:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .cooking-type:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
     }
 
     .delivery-options {
@@ -189,6 +240,100 @@
       color: #aaa;
       font-size: 12px;
       margin-top: 7px;
+      line-height: 1.8;
+    }
+
+    .distribution-status {
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #29251e;
+      color: #e5c58c;
+      line-height: 1.9;
+      font-size: 13px;
+    }
+
+    .price-box {
+      display: none;
+      margin-top: 22px;
+      padding: 20px;
+      border: 1px solid #b99458;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #332819, #211c15);
+      text-align: center;
+    }
+
+    .price-box.show { display: block; }
+    .meal-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.meal-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #514638;
+  border-radius: 9px;
+  background: #191919;
+  cursor: pointer;
+}
+
+.meal-option label {
+  margin: 0;
+  cursor: pointer;
+  line-height: 1.9;
+}
+
+.meal-option strong {
+  display: block;
+  color: #d6b477;
+  margin-bottom: 3px;
+}
+
+.meal-price-box {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #b99458;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #332819, #211c15);
+  text-align: center;
+}
+
+.meal-price-box.show {
+  display: block;
+}
+
+.meal-distribution {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .meal-option {
+    padding: 12px;
+  }
+}
+
+    .price-label {
+      color: #e5c58c;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .price-total {
+      color: #f2d39b;
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .price-details {
+      color: #c5b69e;
+      font-size: 12px;
+      margin-top: 7px;
+      line-height: 1.9;
     }
 
     .submit-button {
@@ -205,9 +350,7 @@
       cursor: pointer;
     }
 
-    .submit-button:hover {
-      background: #e0c18b;
-    }
+    .submit-button:hover { background: #e0c18b; }
 
     .notice {
       display: none;
@@ -251,11 +394,8 @@
       fill: currentColor;
     }
 
-    /* تحسينات الجوال */
     @media (max-width: 600px) {
-      body {
-        overflow-x: hidden;
-      }
+      body { overflow-x: hidden; }
 
       header {
         padding: 12px 4%;
@@ -273,17 +413,10 @@
       .logo img {
         width: 45px;
         height: 48px;
-        flex-shrink: 0;
       }
 
-      .logo span {
-        min-width: 0;
-        line-height: 1.7;
-      }
-
-      .logo small {
-        font-size: 10px;
-      }
+      .logo span { line-height: 1.7; }
+      .logo small { font-size: 10px; }
 
       .back-link {
         font-size: 11px;
@@ -295,28 +428,19 @@
         margin: 30px auto 55px;
       }
 
-      .intro {
-        margin-bottom: 25px;
-      }
-
-      .intro p {
-        line-height: 2;
-      }
+      .intro { margin-bottom: 25px; }
+      .intro p { line-height: 2; }
 
       form {
         padding: 19px 13px;
         border-radius: 11px;
       }
 
-      .section-title {
-        font-size: 17px;
-      }
+      .section-title { font-size: 17px; }
 
-      .field {
-        margin-bottom: 19px;
-      }
+      .field { margin-bottom: 19px; }
 
-      .choices {
+      .choices, .cooking-list {
         grid-template-columns: 1fr;
         gap: 9px;
       }
@@ -326,9 +450,7 @@
         padding: 11px;
       }
 
-      .delivery-options {
-        flex-direction: column;
-      }
+      .delivery-options { flex-direction: column; }
 
       .delivery-options .choice {
         min-width: 0;
@@ -345,9 +467,10 @@
         min-width: 0;
       }
 
-      .submit-button {
-        min-height: 53px;
-      }
+      .sub-section { padding: 13px; }
+      .price-total { font-size: 26px; }
+
+      .submit-button { min-height: 53px; }
 
       .whatsapp {
         width: 52px;
@@ -373,7 +496,6 @@
         <small>SKILLED COOK</small>
       </span>
     </a>
-
     <a href="/" class="back-link">العودة للرئيسية ←</a>
   </header>
 
@@ -392,18 +514,13 @@
 
         <div class="choices">
           <div class="choice">
-            <input type="checkbox" id="slaughter" name="service" value="ذبائح ولائم" />
-            <label for="slaughter">ذبائح ولائم</label>
+            <input type="checkbox" id="slaughter" name="service" value="ذبائح ولائم ومناسبات" />
+            <label for="slaughter">ذبائح ولائم ومناسبات</label>
           </div>
 
           <div class="choice">
             <input type="checkbox" id="buffet" name="service" value="بوفيهات" />
             <label for="buffet">بوفيهات</label>
-          </div>
-
-          <div class="choice">
-            <input type="checkbox" id="events" name="service" value="مناسبات" />
-            <label for="events">مناسبات</label>
           </div>
 
           <div class="choice">
@@ -416,6 +533,230 @@
             <label for="other">غير ذلك</label>
           </div>
         </div>
+        <div class="conditional" id="mealsDetails">
+
+          <div class="sub-section">
+            <h3 class="sub-title">أولاً: اختر الوجبة المطلوبة</h3>
+
+            <div class="meal-options">
+
+              <div class="meal-option">
+                <input type="radio" name="mealType" id="mealA" value="وجبة أ">
+                <label for="mealA">
+                  <strong>وجبة أ</strong>
+                  ربع دجاجة مع الرز + عبوة لبن + ماء 330 مل + 5 حبات تمر
+                </label>
+              </div>
+
+              <div class="meal-option">
+                <input type="radio" name="mealType" id="mealB" value="وجبة ب">
+                <label for="mealB">
+                  <strong>وجبة ب</strong>
+                  ربع دجاجة مع الرز + عصير + ماء 330 مل + 5 حبات تمر
+                </label>
+              </div>
+
+              <div class="meal-option">
+                <input type="radio" name="mealType" id="mealC" value="وجبة ج">
+                <label for="mealC">
+                  <strong>وجبة ج</strong>
+                  ربع دجاجة مع الرز + ماء 330 مل + 5 حبات تمر
+                </label>
+              </div>
+
+              <div class="meal-option">
+                <input type="radio" name="mealType" id="mealD" value="وجبة د">
+                <label for="mealD">
+                  <strong>وجبة د</strong>
+                  ربع دجاجة مع الرز + ماء 330 مل
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="sub-section">
+            <h3 class="sub-title">ثانياً: الكمية المطلوبة</h3>
+
+            <label for="mealQuantity">إجمالي عدد الوجبات</label>
+            <input
+              type="number"
+              id="mealQuantity"
+              min="1"
+              step="1"
+              placeholder="أدخل إجمالي عدد الوجبات"
+            />
+          </div>
+
+          <div class="sub-section meal-distribution">
+            <h3 class="sub-title">ثالثاً: التوزيع اليومي</h3>
+
+            <label>كم عدد الوجبات التي توزع يومياً؟</label>
+
+            <div class="choices">
+
+              <div class="choice">
+                <input
+                  type="radio"
+                  name="distributionMode"
+                  id="dailyDistribution"
+                  value="توزيع يومي"
+                />
+                <label for="dailyDistribution">تحديد عدد الوجبات يومياً</label>
+              </div>
+
+              <div class="choice">
+                <input
+                  type="radio"
+                  name="distributionMode"
+                  id="allDistribution"
+                  value="جميعها"
+                />
+                <label for="allDistribution">جميعها</label>
+              </div>
+
+            </div>
+
+            <div class="conditional" id="dailyQuantityField">
+              <label for="dailyQuantity">عدد الوجبات الموزعة يومياً</label>
+              <input
+                type="number"
+                id="dailyQuantity"
+                min="1"
+                step="1"
+                placeholder="أدخل عدد الوجبات يومياً"
+              />
+              <p class="hint">
+                يجب ألا يتجاوز العدد اليومي إجمالي الكمية المطلوبة.
+              </p>
+            </div>
+          </div>
+
+          <div class="meal-price-box" id="mealPriceBox">
+            <div class="price-label">إجمالي السعر التقديري</div>
+            <div class="price-total" id="mealPriceTotal">0 ريال</div>
+          </div>
+
+        </div>
+        <div class="conditional" id="slaughterDetails">
+          <div class="sub-section">
+            <h3 class="sub-title">أولاً: كمية الذبائح</h3>
+            <label for="slaughterQuantity">عدد الذبائح المطلوبة</label>
+            <input type="number" id="slaughterQuantity" min="1" step="1" placeholder="أدخل عدد الذبائح" />
+          </div>
+
+          <div class="sub-section">
+            <h3 class="sub-title">ثانياً: توزيع أنواع الطبخ</h3>
+            <p class="hint">اختر نوع الطبخ، ثم أدخل عدد الذبائح المخصصة له. يجب توزيع كامل العدد.</p>
+
+            <div class="cooking-list">
+
+              <div class="cooking-item">
+                <div class="choice">
+                  <input type="checkbox" class="cooking-type" id="kabli" value="طبخ كابلي" />
+                  <label for="kabli">طبخ كابلي</label>
+                </div>
+                <div class="cooking-quantity">
+                  <label for="kabliCount">عدد ذبائح الكابلي</label>
+                  <input type="number" class="type-count" id="kabliCount" min="1" step="1" placeholder="الكمية" />
+                </div>
+              </div>
+
+              <div class="cooking-item">
+                <div class="choice">
+                  <input type="checkbox" class="cooking-type" id="madini" value="طبخ مديني" />
+                  <label for="madini">طبخ مديني</label>
+                </div>
+                <div class="cooking-quantity">
+                  <label for="madiniCount">عدد ذبائح المديني</label>
+                  <input type="number" class="type-count" id="madiniCount" min="1" step="1" placeholder="الكمية" />
+                </div>
+              </div>
+
+              <div class="cooking-item">
+                <div class="choice">
+                  <input type="checkbox" class="cooking-type" id="arabi" value="طبخ عربي" />
+                  <label for="arabi">طبخ عربي</label>
+                </div>
+                <div class="cooking-quantity">
+                  <label for="arabiCount">عدد الذبائح للطبخ العربي</label>
+                  <input type="number" class="type-count" id="arabiCount" min="1" step="1" placeholder="الكمية" />
+                </div>
+              </div>
+
+              <div class="cooking-item">
+                <div class="choice">
+                  <input type="checkbox" class="cooking-type" id="turkmeni" value="طبخ تركماني" />
+                  <label for="turkmeni">طبخ تركماني</label>
+                </div>
+                <div class="cooking-quantity">
+                  <label for="turkmeniCount">عدد الذبائح للطبخ التركماني</label>
+                  <input type="number" class="type-count" id="turkmeniCount" min="1" step="1" placeholder="الكمية" />
+                </div>
+              </div>
+
+              <div class="cooking-item">
+                <div class="choice">
+                  <input type="checkbox" class="cooking-type" id="hummus" value="بالحمص" />
+                  <label for="hummus">بالحمص</label>
+                </div>
+                <div class="cooking-quantity">
+                  <label for="hummusCount">عدد الذبائح بالحمص</label>
+                  <input type="number" class="type-count" id="hummusCount" min="1" step="1" placeholder="الكمية" />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="distribution-status" id="distributionHint">
+              أدخل عدد الذبائح أولاً، ثم وزّعها على أنواع الطبخ.
+            </div>
+          </div>
+
+          <div class="sub-section">
+            <h3 class="sub-title">ثالثاً: توفير الذبيحة</h3>
+            <div class="choices">
+              <div class="choice">
+                <input type="radio" name="meatProvider" id="customerMeat" value="العميل يوفر الذبيحة" />
+                <label for="customerMeat">العميل يوفر الذبيحة</label>
+              </div>
+
+              <div class="choice">
+                <input type="radio" name="meatProvider" id="kitchenMeat" value="المطبخ يوفر الذبيحة" />
+                <label for="kitchenMeat">المطبخ يوفر الذبيحة</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="price-box" id="priceBox">
+            <div class="price-label">إجمالي السعر التقديري</div>
+            <div class="price-total" id="priceTotal">0 ريال</div>
+            <div class="price-details" id="priceDetails"></div>
+          </div>
+
+          <div class="sub-section">
+            <h3 class="sub-title">رابعاً: طريقة الدفع</h3>
+
+            <div class="choices">
+              <div class="choice">
+                <input type="radio" name="paymentMethod" id="bankTransfer" value="تحويل بنكي" />
+                <label for="bankTransfer">تحويل بنكي</label>
+              </div>
+
+              <div class="choice">
+                <input type="radio" name="paymentMethod" id="cashPayment" value="نقداً" />
+                <label for="cashPayment">نقداً</label>
+              </div>
+            </div>
+
+            <div class="conditional" id="bankDetails">
+              <p class="hint">بيانات التحويل البنكي – مصرف الراجحي</p>
+              <div class="distribution-status" dir="ltr" style="text-align:center;font-size:17px;font-weight:800;letter-spacing:1px;">
+                SA9480000330608010478114
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="conditional" id="otherDetails">
           <label for="otherDescription">يرجى وصف الخدمة المطلوبة</label>
@@ -423,9 +764,9 @@
         </div>
       </div>
 
-      <div class="field">
-        <label for="quantity">الكمية المطلوبة</label>
-        <input type="number" id="quantity" min="1" required placeholder="أدخل الكمية" />
+      <div class="field" id="otherQuantityField" style="display:none;">
+        <label for="quantity">الكمية المطلوبة للخدمات الأخرى</label>
+        <input type="number" id="quantity" min="1" step="1" placeholder="أدخل الكمية" />
       </div>
 
       <div class="field">
@@ -476,8 +817,8 @@
       </div>
 
       <div class="field">
-        <label for="notes">ملاحظات إضافية (اختياري)</label>
-        <textarea id="notes" rows="4" placeholder="أي تفاصيل أخرى ترغب في إضافتها"></textarea>
+        <label for="notes">ملاحظات وإضافات على الطلب (اختياري)</label>
+        <textarea id="notes" rows="4" placeholder="اكتب ملاحظاتك أو الإضافات المطلوبة لكل أنواع الطبخ والخدمات"></textarea>
       </div>
 
       <button type="submit" class="submit-button">إرسال طلب الخدمة</button>
@@ -502,49 +843,724 @@
   </a>
 
   <script>
-    const otherCheckbox = document.getElementById('other');
-    const otherDetails = document.getElementById('otherDetails');
-    const otherDescription = document.getElementById('otherDescription');
+ 
 
-    otherCheckbox.addEventListener('change', () => {
-      otherDetails.classList.toggle('show', otherCheckbox.checked);
-      otherDescription.required = otherCheckbox.checked;
+const slaughter = document.getElementById('slaughter');
+const slaughterDetails = document.getElementById('slaughterDetails');
+const slaughterQuantity = document.getElementById('slaughterQuantity');
+
+const cookingTypes = [...document.querySelectorAll('.cooking-type')];
+const priceBox = document.getElementById('priceBox');
+const priceTotal = document.getElementById('priceTotal');
+const priceDetails = document.getElementById('priceDetails');
+const distributionHint = document.getElementById('distributionHint');
+
+const customerMeat = document.getElementById('customerMeat');
+const kitchenMeat = document.getElementById('kitchenMeat');
+
+const buffet = document.getElementById('buffet');
+const meals = document.getElementById('meals');
+const other = document.getElementById('other');
+const otherDetails = document.getElementById('otherDetails');
+const otherDescription = document.getElementById('otherDescription');
+const otherQuantityField = document.getElementById('otherQuantityField');
+const quantityInput = document.getElementById('quantity');
+
+const bankTransfer = document.getElementById('bankTransfer');
+const cashPayment = document.getElementById('cashPayment');
+const bankDetails = document.getElementById('bankDetails');
+
+const delivery = document.getElementById('delivery');
+const pickup = document.getElementById('pickup');
+const deliveryDetails = document.getElementById('deliveryDetails');
+const pickupDetails = document.getElementById('pickupDetails');
+const customerLocation = document.getElementById('customerLocation');
+
+const form = document.getElementById('serviceForm');
+const notice = document.getElementById('notice');
+
+// ======================================
+// أسعار الوجبات
+// ======================================
+
+const mealPrices = {
+  mealA: 10,
+  mealB: 10,
+  mealC: 8.5,
+  mealD: 8
+};
+
+const mealDiscountThreshold = 500;
+const mealDiscount = 0.20;
+
+// تحويل خيارات الوجبات إلى اختيار متعدد
+const mealOptions = [
+  ...document.querySelectorAll('input[name="mealType"]')
+];
+
+mealOptions.forEach(input => {
+  input.type = 'checkbox';
+});
+
+// إضافة خانة كمية لكل وجبة
+mealOptions.forEach(input => {
+  const option = input.closest('.meal-option');
+
+  const quantityBox = document.createElement('div');
+  quantityBox.className = 'meal-quantity';
+  quantityBox.style.display = 'none';
+  quantityBox.style.marginTop = '12px';
+  quantityBox.style.width = '100%';
+
+  quantityBox.innerHTML = `
+    <label for="${input.id}Quantity">
+      عدد ${input.value}
+    </label>
+    <input
+      type="number"
+      id="${input.id}Quantity"
+      class="meal-type-quantity"
+      min="1"
+      step="1"
+      placeholder="أدخل الكمية"
+      disabled
+    />
+  `;
+
+  option.appendChild(quantityBox);
+});
+
+const mealQuantity = document.getElementById('mealQuantity');
+
+// الإجمالي للعرض فقط
+mealQuantity.readOnly = true;
+
+const dailyDistribution = document.getElementById('dailyDistribution');
+const allDistribution = document.getElementById('allDistribution');
+const dailyQuantity = document.getElementById('dailyQuantity');
+const dailyQuantityField = document.getElementById('dailyQuantityField');
+
+const mealPriceBox = document.getElementById('mealPriceBox');
+const mealPriceTotal = document.getElementById('mealPriceTotal');
+
+const mealPriceDetails = document.createElement('div');
+mealPriceDetails.className = 'price-details';
+mealPriceBox.appendChild(mealPriceDetails);
+
+// ======================================
+// حساب توزيع الذبائح
+// ======================================
+
+function getDistributedTotal() {
+  return cookingTypes.reduce((sum, type) => {
+    if (!type.checked) return sum;
+
+    const input = type.closest('.cooking-item')
+      .querySelector('.type-count');
+
+    return sum + (Number(input.value) || 0);
+  }, 0);
+}
+
+// ======================================
+// تحديث الخدمات الأخرى
+// ======================================
+
+function updateOtherServices() {
+  const needed = buffet.checked || other.checked;
+
+  otherQuantityField.style.display = needed ? 'block' : 'none';
+  quantityInput.required = needed;
+
+  if (!needed) quantityInput.value = '';
+
+  otherDetails.classList.toggle('show', other.checked);
+  otherDescription.required = other.checked;
+
+  if (!other.checked) otherDescription.value = '';
+
+  updateMeals();
+}
+
+// ======================================
+// حساب إجمالي الوجبات تلقائياً
+// ======================================
+
+function getSelectedMealTotal() {
+  return mealOptions.reduce((sum, option) => {
+    if (!option.checked) return sum;
+
+    const input = document.getElementById(option.id + 'Quantity');
+
+    return sum + (Number(input.value) || 0);
+  }, 0);
+}
+
+// ======================================
+// تحديث الوجبات
+// ======================================
+
+function updateMeals() {
+  const isActive = meals.checked;
+
+  document.getElementById('mealsDetails')
+    .classList.toggle('show', isActive);
+
+  // الإجمالي محسوب تلقائياً وليس مطلوباً من العميل
+  mealQuantity.required = false;
+  mealQuantity.readOnly = true;
+
+  mealOptions.forEach(option => {
+    const box = option.closest('.meal-option')
+      .querySelector('.meal-quantity');
+
+    const input = document.getElementById(option.id + 'Quantity');
+
+    box.style.display = isActive && option.checked ? 'block' : 'none';
+
+    input.disabled = !isActive || !option.checked;
+    input.required = isActive && option.checked;
+
+    if (!isActive || !option.checked) {
+      input.value = '';
+    }
+  });
+
+  if (!isActive) {
+    mealOptions.forEach(option => option.checked = false);
+
+    mealQuantity.value = '';
+    dailyDistribution.checked = false;
+    allDistribution.checked = false;
+    dailyQuantity.value = '';
+
+    mealPriceBox.classList.remove('show');
+    dailyQuantityField.classList.remove('show');
+
+    return;
+  }
+
+  updateMealPrice();
+  updateDailyDistribution();
+}
+
+// ======================================
+// حساب سعر الوجبات والخصم
+// ======================================
+
+function updateMealPrice() {
+  const selectedMeals = mealOptions.filter(option => option.checked);
+
+  // حساب الإجمالي تلقائياً
+  const totalQuantity = getSelectedMealTotal();
+
+  mealQuantity.value = totalQuantity || '';
+
+  if (selectedMeals.length === 0 || totalQuantity < 1) {
+    mealPriceBox.classList.remove('show');
+    return;
+  }
+
+  // التحقق من صحة الكميات
+  const invalidQuantity = selectedMeals.some(option => {
+    const input = document.getElementById(option.id + 'Quantity');
+
+    return !Number.isInteger(Number(input.value)) ||
+      Number(input.value) < 1;
+  });
+
+  if (invalidQuantity) {
+    mealPriceBox.classList.remove('show');
+    return;
+  }
+
+  let subtotal = 0;
+
+  selectedMeals.forEach(option => {
+    const input = document.getElementById(option.id + 'Quantity');
+    const quantity = Number(input.value);
+
+    subtotal += quantity * mealPrices[option.id];
+  });
+
+  // الخصم عند تجاوز 500 وجبة
+  const discountApplied = totalQuantity > mealDiscountThreshold;
+
+  const discountPerMeal = discountApplied ? mealDiscount : 0;
+  const totalDiscount = totalQuantity * discountPerMeal;
+  const finalTotal = subtotal - totalDiscount;
+
+  mealPriceTotal.textContent =
+    finalTotal.toLocaleString('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    }) + ' ريال';
+
+  mealPriceDetails.innerHTML = '';
+
+  const details = [
+    'إجمالي الوجبات: ' + totalQuantity + ' وجبة',
+    'السعر قبل الخصم: ' + subtotal.toFixed(2) + ' ريال'
+  ];
+
+  if (discountApplied) {
+    details.push('الخصم: 20 هللة لكل وجبة');
+
+    details.push(
+      'إجمالي الخصم: ' + totalDiscount.toFixed(2) + ' ريال'
+    );
+  } else {
+    details.push('يبدأ الخصم عند تجاوز 500 وجبة');
+  }
+
+  details.forEach(text => {
+    const line = document.createElement('div');
+    line.textContent = text;
+    mealPriceDetails.appendChild(line);
+  });
+
+  mealPriceBox.classList.add('show');
+}
+
+// ======================================
+// التوزيع اليومي للوجبات
+// ======================================
+
+function updateDailyDistribution() {
+  const active = meals.checked;
+
+  dailyQuantityField.classList.toggle(
+    'show',
+    active && dailyDistribution.checked
+  );
+
+  dailyQuantity.required = active && dailyDistribution.checked;
+
+  if (!dailyDistribution.checked) {
+    dailyQuantity.value = '';
+  }
+}
+
+// ======================================
+// تحديث توزيع الذبائح
+// ======================================
+
+function updateCooking() {
+  const total = Number(slaughterQuantity.value) || 0;
+
+  cookingTypes.forEach(type => {
+    const item = type.closest('.cooking-item');
+    const box = item.querySelector('.cooking-quantity');
+    const input = item.querySelector('.type-count');
+
+    box.classList.toggle('show', slaughter.checked && type.checked);
+
+    input.required = slaughter.checked && type.checked;
+
+    if (!type.checked) {
+      input.value = '';
+      input.disabled = false;
+      input.max = total || 1;
+    }
+  });
+
+  cookingTypes.forEach(type => {
+    if (!type.checked) return;
+
+    const input = type.closest('.cooking-item')
+      .querySelector('.type-count');
+
+    const otherTotal = cookingTypes.reduce((sum, otherType) => {
+      if (!otherType.checked || otherType === type) return sum;
+
+      const otherInput = otherType.closest('.cooking-item')
+        .querySelector('.type-count');
+
+      return sum + (Number(otherInput.value) || 0);
+    }, 0);
+
+    const remaining = Math.max(0, total - otherTotal);
+
+    input.max = remaining;
+    input.disabled = remaining === 0 && Number(input.value) === 0;
+
+    if (Number(input.value) > remaining) {
+      input.value = remaining;
+    }
+  });
+
+  const distributed = getDistributedTotal();
+  const remaining = total - distributed;
+
+  cookingTypes.forEach(type => {
+    if (!type.checked) {
+      type.disabled = total > 0 && remaining <= 0;
+    } else {
+      type.disabled = false;
+    }
+  });
+
+  if (!total || total < 1) {
+    distributionHint.textContent =
+      'أدخل عدد الذبائح أولاً، ثم وزّعها على أنواع الطبخ.';
+  } else if (remaining > 0) {
+    distributionHint.textContent =
+      'تم توزيع ' + distributed + ' من أصل ' + total +
+      ' ذبائح. المتبقي: ' + remaining + ' ذبيحة.';
+  } else if (remaining === 0) {
+    distributionHint.textContent =
+      'اكتمل توزيع جميع الذبائح (' + total + ').';
+  } else {
+    distributionHint.textContent = 'راجع الكميات المدخلة.';
+  }
+
+  updatePrice();
+}
+
+// ======================================
+// حساب سعر الذبائح
+// ======================================
+
+function updatePrice() {
+  const total = Number(slaughterQuantity.value);
+
+  const provider = customerMeat.checked ? 'customer' :
+    kitchenMeat.checked ? 'kitchen' : '';
+
+  const distributed = getDistributedTotal();
+  const hasTypes = cookingTypes.some(type => type.checked);
+
+  if (
+    !slaughter.checked ||
+    !Number.isInteger(total) ||
+    total < 1 ||
+    !provider ||
+    !hasTypes ||
+    distributed !== total
+  ) {
+    priceBox.classList.remove('show');
+    return;
+  }
+
+  const unitPrice = provider === 'customer' ? 400 : 1800;
+  const totalPrice = total * unitPrice;
+
+  priceTotal.textContent =
+    totalPrice.toLocaleString('en-US') + ' ريال';
+
+  priceDetails.textContent =
+    total + ' ذبيحة × ' +
+    unitPrice.toLocaleString('en-US') +
+    ' ريال للذبيحة الواحدة';
+
+  priceBox.classList.add('show');
+}
+
+// ======================================
+// تحديث قسم الذبائح
+// ======================================
+
+function updateSlaughter() {
+  slaughterDetails.classList.toggle('show', slaughter.checked);
+
+  slaughterQuantity.required = slaughter.checked;
+
+  if (!slaughter.checked) {
+    slaughterQuantity.value = '';
+
+    cookingTypes.forEach(type => {
+      type.checked = false;
+      type.disabled = false;
+
+      type.closest('.cooking-item')
+        .querySelector('.type-count').value = '';
     });
 
-    const delivery = document.getElementById('delivery');
-    const pickup = document.getElementById('pickup');
-    const deliveryDetails = document.getElementById('deliveryDetails');
-    const pickupDetails = document.getElementById('pickupDetails');
-    const customerLocation = document.getElementById('customerLocation');
+    customerMeat.checked = false;
+    kitchenMeat.checked = false;
+    bankTransfer.checked = false;
+    cashPayment.checked = false;
 
-    function updateDeliveryMethod() {
-      deliveryDetails.classList.toggle('show', delivery.checked);
-      pickupDetails.classList.toggle('show', pickup.checked);
-      customerLocation.required = delivery.checked;
+    bankDetails.classList.remove('show');
+    priceBox.classList.remove('show');
+  }
+
+  updateCooking();
+}
+
+// ======================================
+// الدفع
+// ======================================
+
+function updatePayment() {
+  bankDetails.classList.toggle('show', bankTransfer.checked);
+}
+
+// ======================================
+// التوصيل والاستلام
+// ======================================
+
+function updateDeliveryMethod() {
+  deliveryDetails.classList.toggle('show', delivery.checked);
+  pickupDetails.classList.toggle('show', pickup.checked);
+
+  customerLocation.required = delivery.checked;
+
+  if (!delivery.checked) {
+    customerLocation.value = '';
+  }
+}
+
+// ======================================
+// الأحداث
+// ======================================
+
+slaughter.addEventListener('change', updateSlaughter);
+
+slaughterQuantity.addEventListener('input', () => {
+  const total = Number(slaughterQuantity.value);
+
+  if (!Number.isInteger(total) || total < 1) {
+    cookingTypes.forEach(type => {
+      type.closest('.cooking-item')
+        .querySelector('.type-count').value = '';
+    });
+  } else if (getDistributedTotal() > total) {
+    cookingTypes.forEach(type => {
+      type.closest('.cooking-item')
+        .querySelector('.type-count').value = '';
+    });
+  }
+
+  updateCooking();
+});
+
+cookingTypes.forEach(type => {
+  type.addEventListener('change', updateCooking);
+
+  const input = type.closest('.cooking-item')
+    .querySelector('.type-count');
+
+  input.addEventListener('input', () => {
+    const total = Number(slaughterQuantity.value) || 0;
+
+    const otherTotal = cookingTypes.reduce((sum, otherType) => {
+      if (!otherType.checked || otherType === type) return sum;
+
+      const otherInput = otherType.closest('.cooking-item')
+        .querySelector('.type-count');
+
+      return sum + (Number(otherInput.value) || 0);
+    }, 0);
+
+    const maximum = Math.max(0, total - otherTotal);
+
+    if (Number(input.value) > maximum) {
+      input.value = maximum;
     }
 
-    delivery.addEventListener('change', updateDeliveryMethod);
-    pickup.addEventListener('change', updateDeliveryMethod);
+    updateCooking();
+  });
+});
 
-    const form = document.getElementById('serviceForm');
-    const notice = document.getElementById('notice');
+customerMeat.addEventListener('change', updatePrice);
+kitchenMeat.addEventListener('change', updatePrice);
 
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
+[ buffet, meals, other ].forEach(item => {
+  item.addEventListener('change', updateOtherServices);
+});
 
-      if (!document.querySelector('input[name="service"]:checked')) {
-        alert('فضلاً اختر نوع الخدمة المطلوبة.');
-        return;
-      }
+mealOptions.forEach(option => {
+  option.addEventListener('change', updateMeals);
 
-      notice.style.display = 'block';
-      notice.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const input = document.getElementById(option.id + 'Quantity');
+
+  input.addEventListener('input', updateMealPrice);
+});
+
+// لا نحتاج حدث إدخال يدوي لإجمالي الوجبات
+
+dailyDistribution.addEventListener('change', () => {
+  updateDailyDistribution();
+});
+
+allDistribution.addEventListener('change', () => {
+  updateDailyDistribution();
+});
+
+dailyQuantity.addEventListener('input', updateMealPrice);
+
+bankTransfer.addEventListener('change', updatePayment);
+cashPayment.addEventListener('change', updatePayment);
+
+delivery.addEventListener('change', updateDeliveryMethod);
+pickup.addEventListener('change', updateDeliveryMethod);
+
+// ======================================
+// التحقق من الطلب قبل الإرسال
+// ======================================
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const selectedServices = [
+    ...document.querySelectorAll('input[name="service"]:checked')
+  ];
+
+  if (selectedServices.length === 0) {
+    alert('فضلاً اختر نوع الخدمة المطلوبة.');
+    return;
+  }
+
+  // التحقق من الوجبات
+
+  if (meals.checked) {
+    const total = getSelectedMealTotal();
+
+    const selectedMeals = mealOptions.filter(option => option.checked);
+
+    // تحديث الإجمالي قبل التحقق
+    mealQuantity.value = total || '';
+
+    if (total < 1) {
+      alert('فضلاً أدخل كمية صحيحة للوجبات المختارة.');
+      return;
+    }
+
+    if (selectedMeals.length === 0) {
+      alert('فضلاً اختر نوع وجبة واحداً على الأقل.');
+      return;
+    }
+
+    const invalidMealQuantity = selectedMeals.some(option => {
+      const input = document.getElementById(option.id + 'Quantity');
+
+      return !Number.isInteger(Number(input.value)) ||
+        Number(input.value) < 1;
     });
 
-    const dateInput = document.getElementById('preparationDate');
-    const now = new Date();
-    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-    dateInput.min = now.toISOString().slice(0, 16);
+    if (invalidMealQuantity) {
+      alert('فضلاً أدخل كمية صحيحة لكل نوع من الوجبات المختارة.');
+      return;
+    }
+
+    if (!dailyDistribution.checked && !allDistribution.checked) {
+      alert('فضلاً حدد طريقة التوزيع اليومي.');
+      return;
+    }
+
+    if (dailyDistribution.checked) {
+      const daily = Number(dailyQuantity.value);
+
+      if (!Number.isInteger(daily) || daily < 1 || daily > total) {
+        alert('فضلاً أدخل عدد الوجبات اليومية بشكل صحيح.');
+        dailyQuantity.focus();
+        return;
+      }
+    }
+  }
+
+  // التحقق من الذبائح
+
+  if (slaughter.checked) {
+    const total = Number(slaughterQuantity.value);
+
+    const selectedTypes = cookingTypes.filter(type => type.checked);
+
+    if (!Number.isInteger(total) || total < 1) {
+      alert('فضلاً أدخل عدد الذبائح بشكل صحيح.');
+      slaughterQuantity.focus();
+      return;
+    }
+
+    if (selectedTypes.length === 0) {
+      alert('فضلاً اختر نوع الطبخ المطلوب.');
+      return;
+    }
+
+    const hasInvalidCount = selectedTypes.some(type => {
+      const input = type.closest('.cooking-item')
+        .querySelector('.type-count');
+
+      return !Number.isInteger(Number(input.value)) ||
+        Number(input.value) < 1;
+    });
+
+    if (hasInvalidCount || getDistributedTotal() !== total) {
+      alert('يجب توزيع العدد الإجمالي للذبائح بالكامل على أنواع الطبخ.');
+
+      distributionHint.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+
+      return;
+    }
+
+    if (!customerMeat.checked && !kitchenMeat.checked) {
+      alert('فضلاً حدد من سيوفر الذبيحة.');
+      return;
+    }
+
+    if (!bankTransfer.checked && !cashPayment.checked) {
+      alert('فضلاً اختر طريقة الدفع.');
+      return;
+    }
+  }
+
+  // الخدمات الأخرى
+
+  if (
+    quantityInput.required &&
+    (!quantityInput.value || Number(quantityInput.value) < 1)
+  ) {
+    alert('فضلاً أدخل الكمية المطلوبة للخدمات الأخرى.');
+    quantityInput.focus();
+    return;
+  }
+
+  if (other.checked && !otherDescription.value.trim()) {
+    alert('فضلاً اكتب وصف الخدمة المطلوبة.');
+    otherDescription.focus();
+    return;
+  }
+
+  // التوصيل
+
+  if (delivery.checked && !customerLocation.value.trim()) {
+    alert('فضلاً أدخل رابط موقع التوصيل.');
+    customerLocation.focus();
+    return;
+  }
+
+  notice.style.display = 'block';
+
+  notice.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+});
+
+// ======================================
+// تشغيل الوظائف عند فتح الصفحة
+// ======================================
+
+updateOtherServices();
+updateMeals();
+updateSlaughter();
+updateDeliveryMethod();
+updatePayment();
+updateDailyDistribution();
+
+// تحديد أقل موعد للتجهيز
+const dateInput = document.getElementById('preparationDate');
+
+const now = new Date();
+
+now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+
+dateInput.min = now.toISOString().slice(0, 16);
+
   </script>
 </body>
 </html>

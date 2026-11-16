@@ -11,49 +11,121 @@
   </head>
 
   <body>
-    <header class="header">
-      <a href="#" class="logo">
-  <img src="/images/new%20logo.png" alt="شعار الطباخ الماهر" />
-  <span>
-    <strong>شركة الطباخ الماهر لخدمات الإعاشة</strong>
-    <small>SKILLED COOK</small>
-  </span>
+    
+<header class="header">
+
+  <a href="#home" class="logo">
+    <img src="/images/new%20logo.png" alt="شعار الطباخ الماهر" />
+    <span>
+      <strong data-i18n="brandName">شركة الطباخ الماهر لخدمات الإعاشة</strong>
+      <small>SKILLED COOK</small>
+    </span>
+  </a>
+
+  <!-- أيقونة الترجمة بجوار اسم الشركة -->
+  <div class="language-menu" id="language-menu">
+    <button class="language-toggle" type="button"
+      aria-label="تغيير اللغة" aria-expanded="false">
+      <img id="current-flag" src="https://flagcdn.com/w80/sa.png" alt="العربية">
+      <span class="language-arrow">⌄</span>
+    </button>
+
+    <div class="language-options" id="language-options">
+      <button type="button" data-language="ar" aria-label="العربية">
+        <img src="https://flagcdn.com/w80/sa.png" alt="العربية">
+      </button>
+      <button type="button" data-language="en" aria-label="English">
+        <img src="https://flagcdn.com/w80/gb.png" alt="English">
+      </button>
+    </div>
+  </div>
+
+  <!-- الروابط الظاهرة -->
+  <nav class="main-nav">
+    <a href="#portfolio" data-i18n="portfolio">سابقة أعمالنا</a>
+    <a href="https://share.google/mtl7WTzxvQoWFN91m"
+       target="_blank" rel="noopener noreferrer"
+       data-i18n="location">موقعنا</a>
+       
+<a
+  href="/files/src/pages/src/pages/kitchen-profile.pdf"
+  target="_blank"
+  rel="noopener"
+  class="profile-nav"
+>
+  <span class="profile-icon">▤</span>
+  <span>بروفايل المطبخ</span>
 </a>
-    <nav>
-  <a href="#home">الرئيسية</a>
-  <a href="#about">من نحن</a>
-  <a href="#services">خدماتنا</a>
-  <a href="#portfolio">سابقة أعمالنا</a>
-  <a href="https://share.google/mtl7WTzxvQoWFN91m" target="_blank" rel="noopener noreferrer">موقعنا</a>
-  <a href="#contact">تواصل معنا</a>
-  <a href="/careers" class="contact-button jobs-link">بوابة التوظيف</a>
-</nav>
-<div class="header-buttons">
-  <a href="/request" class="contact-button">اطلب خدمة</a>
-</div>
+
+  </nav>
+
+  <!-- أزرار الخدمات والتوظيف -->
+  <div class="header-buttons">
+    <a href="/request" class="contact-button" data-i18n="request">اطلب خدمة</a>
+    <a href="/careers" class="contact-button jobs-link" data-i18n="careers">بوابة التوظيف</a>
+  </div>
+
+  <!-- زر القائمة الجانبية -->
+  <button class="menu-toggle" id="menu-toggle"
+    type="button" aria-label="فتح القائمة" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
 </header>
+
+<!-- خلفية القائمة -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<!-- القائمة الجانبية -->
+<aside class="side-menu" id="side-menu" aria-hidden="true">
+
+  <div class="side-menu-header">
+    <strong>القائمة الرئيسية</strong>
+    <button type="button" class="menu-close" id="menu-close"
+      aria-label="إغلاق القائمة">×</button>
+  </div>
+
+  <nav class="side-menu-links">
+    <a href="#home" data-i18n="home">الرئيسية</a>
+    <a href="#about" data-i18n="about">من نحن</a>
+    <a href="#services" data-i18n="services">خدماتنا</a>
+    <a href="#contact" data-i18n="contact">تواصل معنا</a>
+  </nav>
+
+</aside>
+
 
     <main>
       <section class="hero" id="home">
         <div class="hero-content">
-          <p class="eyebrow">شركة الطباخ الماهر لخدمات الإعاشة</p>
-          <h1>خبرة في الإعاشة<br />وإتقان في <span>الطهي</span></h1>
-          <p class="description">
+          <p class="eyebrow" data-i18n="eyebrow">شركة الطباخ الماهر لخدمات الإعاشة</p>
+
+          <h1>
+            <span data-i18n="heroTitle">خبرة في الإعاشة</span><br />
+            <span data-i18n="heroTitle2">وإتقان في</span>&nbsp;<span data-i18n="heroHighlight">الطهي</span>
+          </h1>
+
+          <p class="description" data-i18n="heroDescription">
             نقدم خدمات الإعاشة والتموين وفق أعلى معايير الجودة،
             بخبرة واحترافية تلبي احتياجات عملائنا في جميع المواسم.
           </p>
+
           <div class="hero-actions">
-            <a href="#services" class="gold-button">اكتشف خدماتنا</a>
-            <a href="#about" class="text-button">تعرف علينا ←</a>
+            <a href="#services" class="gold-button" data-i18n="discover">اكتشف خدماتنا</a>
+            <a href="#about" class="text-button" data-i18n="knowUs">تعرف علينا ←</a>
           </div>
         </div>
-		
       </section>
 
       <section class="intro" id="about">
-        <p class="eyebrow">من نحن</p>
-        <h2>نصنع تجربة إعاشة<br />تليق <span>بثقتكم</span></h2>
-        <p>
+        <p class="eyebrow" data-i18n="aboutTitle">من نحن</p>
+        <h2>
+          <span data-i18n="aboutHeading">نصنع تجربة إعاشة</span><br />
+          <span data-i18n="aboutHeading2">تليق</span>&nbsp;<span data-i18n="aboutHighlight">بثقتكم</span>
+        </h2>
+        <p data-i18n="aboutDescription">
           الطباخ الماهر شركة متخصصة في خدمات الإعاشة والتموين،
           نسعى لتقديم حلول غذائية متكاملة تجمع بين جودة المكونات
           والاحترافية في التنفيذ والالتزام بالمواعيد.
@@ -61,633 +133,996 @@
       </section>
 
       <section class="services" id="services">
-        <p class="eyebrow">ما نقدمه</p>
-        <h2>خدماتنا</h2>
+        <p class="eyebrow" data-i18n="servicesEyebrow">ما نقدمه</p>
+        <h2 data-i18n="servicesHeading">خدماتنا</h2>
         <div class="service-grid">
-          <article><span>01</span><h3>الإعاشة والتموين</h3><p>حلول متكاملة لتقديم الوجبات والإعاشة.</p></article>
-          <article><span>02</span><h3>خدمات الحجاج والمعتمرين</h3><p>تجهيز وتقديم الوجبات وفق احتياجات المواسم.</p></article>
-          <article><span>03</span><h3>الفنادق والسكن</h3><p>خدمات تموين تناسب المنشآت ومرافق الضيافة.</p></article>
-          <article><span>04</span><h3>المواسم والفعاليات</h3><p>تجهيز وتنظيم خدمات الطعام للمناسبات.</p></article>
+          <article><span>01</span><h3 data-i18n="service1Title">الإعاشة والتموين</h3><p data-i18n="service1Description">حلول متكاملة لتقديم الوجبات والإعاشة.</p></article>
+          <article><span>02</span><h3 data-i18n="service2Title">خدمات الحجاج والمعتمرين</h3><p data-i18n="service2Description">تجهيز وتقديم الوجبات وفق احتياجات المواسم.</p></article>
+          <article><span>03</span><h3 data-i18n="service3Title">الفنادق والسكن</h3><p data-i18n="service3Description">خدمات تموين تناسب المنشآت ومرافق الضيافة.</p></article>
+          <article><span>04</span><h3 data-i18n="service4Title">المواسم والفعاليات</h3><p data-i18n="service4Description">تجهيز وتنظيم خدمات الطعام للمناسبات.</p></article>
         </div>
       </section>
 
       <section class="portfolio" id="portfolio">
-        <p class="eyebrow">نفخر بثقة شركائنا</p>
-        <h2>سابقة أعمالنا</h2>
-        <p class="portfolio-intro">
+        <p class="eyebrow" data-i18n="portfolioEyebrow">نفخر بثقة شركائنا</p>
+        <h2 data-i18n="portfolioHeading">سابقة أعمالنا</h2>
+        <p class="portfolio-intro" data-i18n="portfolioIntro">
           سجل من الأعمال والشراكات في مجال الإعاشة والتموين وخدمة ضيوف الرحمن.
         </p>
 
         <div class="portfolio-box">
-
           <div class="portfolio-year">
-            <h3>عام 1444هـ</h3>
+            <h3 data-i18n="year1444">عام 1444هـ</h3>
             <ul>
-              <li>تم التعاقد مع بعثة حجاج إندونيسيا بمكة عدد 3,500 حاج.</li>
-              <li>تم التعاقد مع شركة الرفادة لحجاج مقدونيا عدد 2,000 حاج.</li>
-              <li>تم التعاقد مع شركة الرفادة لحجاج كوسوفو عدد 2,000 حاج.</li>
-              <li>تم التعاقد مع شركة الرفادة لحجاج المجاملة عدد 1,500 حاج.</li>
-              <li>تم التعاقد مع شركة مشارق الماسية لحجاج ماليزيا بالمشاعر عدد 6,400 حاج.</li>
-              <li>تم التعاقد مع شركة مشارق الذهبية لحجاج إندونيسيا بالمشاعر عدد 3,200 حاج.</li>
-              <li>تم التعاقد مع شركة رواف منى لحجاج الهند بالمشاعر عدد 11,200 حاج.</li>
+              <li data-i18n="project1">تم التعاقد مع بعثة حجاج إندونيسيا بمكة عدد 3,500 حاج.</li>
+              <li data-i18n="project2">تم التعاقد مع شركة الرفادة لحجاج مقدونيا عدد 2,000 حاج.</li>
+              <li data-i18n="project3">تم التعاقد مع شركة الرفادة لحجاج كوسوفو عدد 2,000 حاج.</li>
+              <li data-i18n="project4">تم التعاقد مع شركة الرفادة لحجاج المجاملة عدد 1,500 حاج.</li>
+              <li data-i18n="project5">تم التعاقد مع شركة مشارق الماسية لحجاج ماليزيا بالمشاعر عدد 6,400 حاج.</li>
+              <li data-i18n="project6">تم التعاقد مع شركة مشارق الذهبية لحجاج إندونيسيا بالمشاعر عدد 3,200 حاج.</li>
+              <li data-i18n="project7">تم التعاقد مع شركة رواف منى لحجاج الهند بالمشاعر عدد 11,200 حاج.</li>
             </ul>
           </div>
 
           <div class="portfolio-year">
-            <h3>عام 1445هـ</h3>
+            <h3 data-i18n="year1445">عام 1445هـ</h3>
             <ul>
-              <li>تم التعاقد مع بعثة حجاج إندونيسيا بمكة عدد 7,000 حاج.</li>
-              <li>تم التعاقد مع شركة مشارق المتميزة لحجاج إندونيسيا بالمشاعر عدد 3,000 حاج.</li>
-              <li>تم التعاقد مع شركة مشارق لحجاج باكستان بالمشاعر عدد 5,000 حاج.</li>
+              <li data-i18n="project8">تم التعاقد مع بعثة حجاج إندونيسيا بمكة عدد 7,000 حاج.</li>
+              <li data-i18n="project9">تم التعاقد مع شركة مشارق المتميزة لحجاج إندونيسيا بالمشاعر عدد 3,000 حاج.</li>
+              <li data-i18n="project10">تم التعاقد مع شركة مشارق لحجاج باكستان بالمشاعر عدد 5,000 حاج.</li>
             </ul>
           </div>
 
           <div class="portfolio-year">
-  <h3>عام 1446هـ</h3>
-  <ul>
-    <li>تم التعاقد مع بعثة حجاج إندونيسيا بمكة عدد 3,500 حاج.</li>
-    <li>تم التعاقد مع جمعية نماء الأهلية لوجبات إفطار صائم عدد 200,000 وجبة.</li>
-    <li>تم التعاقد مع جمعية نماء المكية لوجبات إفطار صائم عدد 15,000 وجبة.</li>
-    <li>تم التعاقد مع وقف خادم الحرمين الشريفين الملك عبدالله لوجبات إفطار صائم عدد 40,000 وجبة.</li>
-    <li>تم التعاقد مع أوقاف صالح الراجحي لوجبات إفطار صائم عدد 70,000 وجبة.</li>
-    <li>تم تنفيذ وتقديم وجبات إفطار صائم للأفراد والجهات عدد 400,000 وجبة.</li>
-  </ul>
-</div>
-
-          <div class="portfolio-year">
-            <h3>عام 1447هـ</h3>
+            <h3 data-i18n="year1446">عام 1446هـ</h3>
             <ul>
-              <li>تم التعاقد مع شركة مشارق لحجاج إندونيسيا بالمشاعر المقدسة عدد 3,200 حاج.</li>
-              <li>تم التعاقد مع شركة ضيوف البيت لحجاج إندونيسيا بالمشاعر المقدسة عدد 3,600 حاج.</li>
-              <li>تم التعاقد مع شركة رفادة لحجاج الجزائر بالمشاعر المقدسة عدد 4,000 حاج.</li>
-              <li>تم التعاقد مع بعثة حجاج إندونيسيا بمكة المكرمة عدد 4,000 حاج.</li>
+              <li data-i18n="project11">تم التعاقد مع بعثة حجاج إندونيسيا بمكة عدد 3,500 حاج.</li>
+              <li data-i18n="project12">تم التعاقد مع جمعية نماء الأهلية لوجبات إفطار صائم عدد 200,000 وجبة.</li>
+              <li data-i18n="project13">تم التعاقد مع جمعية نماء المكية لوجبات إفطار صائم عدد 15,000 وجبة.</li>
+              <li data-i18n="project14">تم التعاقد مع وقف خادم الحرمين الشريفين الملك عبدالله لوجبات إفطار صائم عدد 40,000 وجبة.</li>
+              <li data-i18n="project15">تم التعاقد مع أوقاف صالح الراجحي لوجبات إفطار صائم عدد 70,000 وجبة.</li>
+              <li data-i18n="project16">تم تنفيذ وتقديم وجبات إفطار صائم للأفراد والجهات عدد 400,000 وجبة.</li>
             </ul>
           </div>
 
+          <div class="portfolio-year">
+            <h3 data-i18n="year1447">عام 1447هـ</h3>
+            <ul>
+              <li data-i18n="project17">تم التعاقد مع شركة مشارق لحجاج إندونيسيا بالمشاعر المقدسة عدد 3,200 حاج.</li>
+              <li data-i18n="project18">تم التعاقد مع شركة ضيوف البيت لحجاج إندونيسيا بالمشاعر المقدسة عدد 3,600 حاج.</li>
+              <li data-i18n="project19">تم التعاقد مع شركة رفادة لحجاج الجزائر بالمشاعر المقدسة عدد 4,000 حاج.</li>
+              <li data-i18n="project20">تم التعاقد مع بعثة حجاج إندونيسيا بمكة المكرمة عدد 4,000 حاج.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      
-<section class="closing" id="contact">
-  <p class="eyebrow">الطباخ الماهر</p>
-  <h2>شريككم في كل موسم</h2>
-  <p>نسعد بتواصلكم ونتطلع لخدمتكم</p>
+      <section class="closing" id="contact">
+        <p class="eyebrow" data-i18n="closingEyebrow">الطباخ الماهر</p>
+        <h2 data-i18n="closingHeading">شريككم في كل موسم</h2>
+        <p data-i18n="closingDescription">نسعد بتواصلكم ونتطلع لخدمتكم</p>
 
-  <div class="contact-details">
-    <a href="tel:+966533818299" class="gold-button">
-      اتصل بنا: 0533818299
-    </a>
+        <div class="contact-details">
+          <a href="tel:+966533818299" class="gold-button" data-i18n="callUs">اتصل بنا: 0533818299</a>
+          <a href="mailto:SKILLED.COOK23@GMAIL.COM" class="gold-button" data-i18n="emailUs">البريد الإلكتروني: SKILLED.COOK23@GMAIL.COM</a>
+        </div>
 
-    <a href="mailto:SKILLED.COOK23@GMAIL.COM" class="gold-button">
-      البريد الإلكتروني: SKILLED.COOK23@GMAIL.COM
-    </a>
-  </div>
-
-  <p>الطباخ الماهر .. طبخ ماهر بكل المواسم</p>
-</section>
-
+        <p data-i18n="slogan">الطباخ الماهر .. طبخ ماهر بكل المواسم</p>
+      </section>
     </main>
 
     <footer>
-      <p>© 2026 شركة الطباخ الماهر لخدمات الإعاشة. جميع الحقوق محفوظة.</p>
+      <p data-i18n="footerText">© 2026 شركة الطباخ الماهر لخدمات الإعاشة. جميع الحقوق محفوظة.</p>
     </footer>
-    <a
-  href="https://wa.me/966557612821"
-  class="whatsapp-float"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="تواصل معنا عبر واتساب"
->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="white">
-    <path d="M12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.2 1.6 6.02L0 24l6.16-1.62A12 12 0 1 0 12 0zm0 21.9a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38A9.9 9.9 0 1 1 12 21.9zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.77-.73 2.02-1.44.25-.71.25-1.32.17-1.44-.07-.13-.27-.2-.57-.35z"/>
-  </svg>
-  <span>واتساب</span>
-</a>
 
-<style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 22px;
-    right: 22px;
-    z-index: 9999;
-    background: #25D366;
-    color: white;
-    padding: 13px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: Cairo, sans-serif;
-    font-weight: bold;
-    box-shadow: 0 4px 15px #0005;
-  }
+    <a href="https://wa.me/966557612821" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="white">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.2 1.6 6.02L0 24l6.16-1.62A12 12 0 1 0 12 0zm0 21.9a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38A9.9 9.9 0 1 1 12 21.9zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.77-.73 2.02-1.44.25-.71.25-1.32.17-1.44-.07-.13-.27-.2-.57-.35z"/>
+      </svg>
+      <span data-i18n="whatsapp">واتساب</span>
+    </a>
 
-  .whatsapp-float:hover {
-    background: #1ebe5d;
-  }
-</style>
-  </body>
-</html>
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+        z-index: 9999;
+        background: #25D366;
+        color: white;
+        padding: 13px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: Cairo, sans-serif;
+        font-weight: bold;
+        box-shadow: 0 4px 15px #0005;
+      }
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+      .whatsapp-float:hover {
+        background: #1ebe5d;
+      }
+    </style>
 
-  :root {
-    --black: #090909;
-    --surface: #11100e;
-    --gold: #d99a53;
-    --cream: #f3e7d2;
-    --muted: #aaa29a;
-  }
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--black);
-    color: var(--cream);
-    font-family: 'Cairo', sans-serif;
-  }
+      :root {
+        --black: #090909;
+        --surface: #11100e;
+        --gold: #d99a53;
+        --cream: #f3e7d2;
+        --muted: #aaa29a;
+      }
 
-  a { color: inherit; text-decoration: none; }
-  .header {
-    min-height: 88px;
-    padding: 18px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ffffff15;
-  }
-  .logo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: auto;
-  min-width: 0;
-  height: 65px;
-  overflow: visible;
-  flex-shrink: 0;
-}
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--black);
+        color: var(--cream);
+        font-family: 'Cairo', sans-serif;
+      }
 
-.logo img {
-width: 80px;
-height: 95px;
-  object-fit: contain;
-  display: block;
-  flex-shrink: 0;
-}
- .logo span {
+      a { color: inherit; text-decoration: none; }
+      .header {
+        min-height: 88px;
+        padding: 18px 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ffffff15;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        width: auto;
+        min-width: 0;
+        height: 65px;
+        overflow: visible;
+        flex-shrink: 0;
+      }
+
+      .logo img {
+        width: 80px;
+        height: 95px;
+        object-fit: contain;
+        display: block;
+        flex-shrink: 0;
+      }
+
+      .logo span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        white-space: nowrap;
+        line-height: 1.4;
+      }
+
+      .logo strong {
+        color: var(--gold);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .logo small {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      h1 span, h2 span { color: var(--gold); }
+      nav { display: flex; gap: 32px; color: #ddd2c3; font-size: 14px; }
+      nav a:hover { color: var(--gold); }
+
+      .contact-button, .gold-button {
+        background: var(--gold);
+        color: #17100a;
+        padding: 12px 23px;
+        font-weight: 800;
+        display: inline-block;
+      }
+
+      .hero {
+        min-height: 650px;
+        padding: 100px 10%;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 50px;
+        background: radial-gradient(ellipse at 15% 45%, #49301d55, transparent 48%);
+      }
+
+      .eyebrow { color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+      h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.45; margin: 20px 0; font-weight: 900; }
+      .description { color: var(--muted); max-width: 550px; line-height: 2.2; font-size: 16px; }
+      .hero-actions { display: flex; align-items: center; gap: 30px; margin-top: 35px; }
+      .text-button { color: var(--gold); font-weight: 700; }
+      .hero-decoration { min-height: 390px; position: relative; display: grid; place-items: center; }
+
+      .gold-circle {
+        width: 310px;
+        height: 310px;
+        border: 1px solid #d99a5380;
+        border-radius: 50%;
+        box-shadow: 0 0 100px #d99a5315, inset 0 0 80px #d99a5310;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 35px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      .gold-circle img {
+        width: 180px;
+        max-width: 100%;
+        height: 150px;
+        object-fit: contain;
+      }
+
+      .decoration-text {
+        color: var(--gold);
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+
+      .decoration-text {
+        position: absolute;
+        text-align: center;
+        font-size: 55px;
+        font-weight: 900;
+        line-height: 1.05;
+        color: #d99a53;
+        opacity: .85;
+        direction: ltr;
+      }
+
+      .small-label { position: absolute; bottom: 5px; color: var(--muted); font-size: 13px; }
+
+      .intro { padding: 100px 12%; background: #f3e7d2; color: #17120d; }
+      .intro h2, .services h2, .closing h2 { font-size: 42px; line-height: 1.5; margin: 10px 0; }
+      .intro p:last-child { max-width: 700px; line-height: 2.2; color: #62584d; }
+
+      .services { padding: 100px 10%; }
+      .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 40px; }
+      .service-grid article { border: 1px solid #ffffff20; padding: 30px; background: var(--surface); }
+      .service-grid article span { color: var(--gold); font-size: 13px; }
+      .service-grid h3 { font-size: 21px; }
+      .service-grid p { color: var(--muted); line-height: 2; }
+
+      .closing { text-align: center; padding: 90px 20px; background: #17120e; }
+      .closing p:not(.eyebrow) { color: var(--muted); margin-bottom: 30px; }
+      footer { padding: 25px; text-align: center; color: #888; font-size: 12px; border-top: 1px solid #ffffff15; }
+
+      @media (max-width: 750px) {
+        .header { flex-wrap: wrap; gap: 18px; }
+        nav { order: 3; width: 100%; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .contact-button { font-size: 12px; }
+        .hero { grid-template-columns: 1fr; padding: 65px 7%; }
+        .hero-decoration { min-height: 270px; }
+        .gold-circle { width: 220px; height: 220px; }
+        .decoration-text { font-size: 40px; }
+        .service-grid { grid-template-columns: 1fr; }
+        .intro, .services { padding: 65px 7%; }
+      }
+
+      .portfolio {
+        padding: 90px 10%;
+        text-align: center;
+        background: #0d0c0a;
+      }
+
+      .portfolio h2 {
+        color: var(--cream);
+        font-size: 36px;
+        margin: 10px 0 15px;
+      }
+
+      .portfolio-intro {
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 2;
+        margin: 0 auto 35px;
+        max-width: 650px;
+      }
+
+      .portfolio-box {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 35px 40px;
+        text-align: right;
+        background: linear-gradient(145deg, #17130f, #0d0c0a);
+        border: 1px solid #d99a5360;
+        border-radius: 18px;
+        box-shadow: 0 15px 45px #00000050;
+      }
+
+      .portfolio-year {
+        padding: 20px 0;
+        border-bottom: 1px solid #d99a5335;
+      }
+
+      .portfolio-year:last-child { border-bottom: none; padding-bottom: 0; }
+      .portfolio-year:first-child { padding-top: 0; }
+
+      .portfolio-year h3 {
+        display: inline-block;
+        color: var(--gold);
+        font-size: 22px;
+        font-weight: 800;
+        margin: 0 0 15px;
+        padding: 5px 15px;
+        border-right: 3px solid var(--gold);
+        background: #d99a5310;
+      }
+
+      .portfolio-year ul { list-style: none; padding: 0; margin: 0; }
+
+      .portfolio-year li {
+        position: relative;
+        color: #e5ded4;
+        font-size: 15px;
+        line-height: 2.1;
+        padding: 5px 22px 5px 0;
+      }
+
+      .portfolio-year li::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 18px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+
+      @media (max-width: 768px) {
+        .portfolio { padding: 65px 5%; }
+        .portfolio h2 { font-size: 29px; }
+        .portfolio-box { padding: 25px 20px; }
+        .portfolio-year h3 { font-size: 19px; }
+        .portfolio-year li { font-size: 14px; line-height: 2; }
+      }
+
+      .hero .eyebrow { font-size: 20px; }
+
+      .header-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+
+      .contact-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 25px;
+      }
+
+      @media (max-width: 750px) {
+        body { overflow-x: hidden; }
+        .header {
+          width: 100%;
+          min-height: auto;
+          padding: 14px 4%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        .logo { height: auto; max-width: 100%; gap: 8px; }
+        .logo img { width: 55px; height: 65px; }
+        .logo span { white-space: normal; gap: 2px; }
+        .logo strong { font-size: 13px; }
+        .logo small { font-size: 11px; letter-spacing: 1px; }
+        .header-buttons { margin-right: auto; }
+        .header-buttons .contact-button { padding: 9px 12px; font-size: 12px; white-space: nowrap; }
+
+        nav {
+          order: 3;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 8px 15px;
+          padding-top: 12px;
+          border-top: 1px solid #ffffff18;
+          font-size: 12px;
+        }
+
+        nav a { padding: 4px 0; }
+        nav .jobs-link { padding: 6px 10px; }
+        .hero {
+          min-height: auto;
+          display: block;
+          padding: 65px 6%;
+          text-align: center;
+        }
+
+        .hero .eyebrow { font-size: 15px; }
+        .hero h1 { font-size: clamp(32px, 8vw, 43px); line-height: 1.5; margin: 18px 0; }
+        .description { font-size: 14px; line-height: 2; margin: 0 auto; }
+        .hero-actions { justify-content: center; flex-wrap: wrap; gap: 18px; margin-top: 25px; }
+        .intro { padding: 60px 7%; }
+        .intro h2, .services h2, .closing h2 { font-size: 29px; line-height: 1.6; }
+        .intro p:last-child { font-size: 14px; line-height: 2; }
+        .services { padding: 60px 6%; }
+        .service-grid { grid-template-columns: 1fr; gap: 13px; margin-top: 25px; }
+        .service-grid article { padding: 23px 20px; }
+        .service-grid h3 { font-size: 18px; }
+        .service-grid p { font-size: 13px; }
+        .portfolio { padding: 60px 5%; }
+        .portfolio h2 { font-size: 29px; }
+        .portfolio-intro { font-size: 13px; }
+        .portfolio-box { padding: 22px 15px; border-radius: 12px; }
+        .portfolio-year h3 { font-size: 17px; }
+        .portfolio-year li { font-size: 13px; line-height: 2; padding-right: 17px; }
+        .closing { padding: 65px 6%; }
+        .closing h2 { font-size: 27px; }
+        .contact-details { flex-direction: column; align-items: stretch; }
+        .contact-details a { width: 100%; padding: 12px 10px; font-size: 12px; overflow-wrap: anywhere; }
+        footer { padding: 20px 12px; font-size: 11px; line-height: 2; }
+      }
+
+      @media (max-width: 380px) {
+        .logo img { width: 45px; height: 55px; }
+        .logo strong { font-size: 11px; }
+        .header-buttons .contact-button { padding: 8px 9px; font-size: 11px; }
+        nav { gap: 7px 11px; font-size: 11px; }
+        .hero h1 { font-size: 30px; }
+      }
+
+      /* Language Switcher */
+      .language-menu { position: relative; display: inline-block; direction: ltr; }
+      .language-toggle {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 9px;
+        background: #242424;
+        border: 1px solid #b88646;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .language-toggle img, .language-options img {
+        width: 24px;
+        height: 16px;
+        object-fit: cover;
+        display: block;
+        border-radius: 2px;
+      }
+
+      .language-arrow { color: #d6ad68; font-size: 14px; }
+
+      .language-options {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        min-width: 44px;
+        padding: 5px;
+        background: #242424;
+        border: 1px solid #b88646;
+        border-radius: 8px;
+        z-index: 1000;
+        gap: 5px;
+      }
+
+      .language-options.show { display: flex; flex-direction: column; }
+      .language-options button {
+        border: 0;
+        background: transparent;
+        padding: 7px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .language-options button:hover { background: #3a3a3a; }
+      .language-toggle:focus-visible, .language-options button:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      .language-options button.active { background: #3a3a3a; }
+
+      [dir="ltr"] .portfolio-box { text-align: left; }
+      [dir="ltr"] .portfolio-year h3 { border-right: 0; border-left: 3px solid var(--gold); }
+      [dir="ltr"] .portfolio-year li { padding: 5px 0 5px 22px; }
+      [dir="ltr"] .portfolio-year li::before { right: auto; left: 0; }
+      [dir="ltr"] .logo span { align-items: flex-start; }
+      
+/* القائمة الجانبية */
+.menu-toggle {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  white-space: nowrap;
-  line-height: 1.4;
-}
-
-.logo strong {
-  color: var(--gold);
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.logo small {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-h1 span, h2 span {
-  color: var(--gold);
-}
-  nav { display: flex; gap: 32px; color: #ddd2c3; font-size: 14px; }
-  nav a:hover { color: var(--gold); }
-  .contact-button, .gold-button {
-    background: var(--gold);
-    color: #17100a;
-    padding: 12px 23px;
-    font-weight: 800;
-    display: inline-block;
-  }
-
-  .hero {
-    min-height: 650px;
-    padding: 100px 10%;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    align-items: center;
-    gap: 50px;
-    background: radial-gradient(ellipse at 15% 45%, #49301d55, transparent 48%);
-  }
-  .eyebrow { color: var(--gold); font-size: 13px; font-weight: 700; letter-spacing: 1px; }
-  h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.45; margin: 20px 0; font-weight: 900; }
-  .description { color: var(--muted); max-width: 550px; line-height: 2.2; font-size: 16px; }
-  .hero-actions { display: flex; align-items: center; gap: 30px; margin-top: 35px; }
-  .text-button { color: var(--gold); font-weight: 700; }
-  .hero-decoration { min-height: 390px; position: relative; display: grid; place-items: center; }
-  .gold-circle {
-  width: 310px;
-  height: 310px;
-  border: 1px solid #d99a5380;
-  border-radius: 50%;
-  box-shadow: 0 0 100px #d99a5315, inset 0 0 80px #d99a5310;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 35px;
-  box-sizing: border-box;
-  text-align: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  border: 1px solid rgba(190, 145, 75, 0.4);
+  border-radius: 9px;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
-.gold-circle img {
-  width: 180px;
-  max-width: 100%;
-  height: 150px;
-  object-fit: contain;
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #c69a55;
+  border-radius: 3px;
 }
 
-.decoration-text {
-  color: var(--gold);
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  margin: 0;
-}
-  .decoration-text {
-    position: absolute; text-align: center; font-size: 55px;
-    font-weight: 900; line-height: 1.05; color: #d99a53;
-    opacity: .85; direction: ltr;
-  }
-  .small-label { position: absolute; bottom: 5px; color: var(--muted); font-size: 13px; }
-
-  .intro { padding: 100px 12%; background: #f3e7d2; color: #17120d; }
-  .intro h2, .services h2, .closing h2 { font-size: 42px; line-height: 1.5; margin: 10px 0; }
-  .intro p:last-child { max-width: 700px; line-height: 2.2; color: #62584d; }
-
-  .services { padding: 100px 10%; }
-  .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 40px; }
-  .service-grid article { border: 1px solid #ffffff20; padding: 30px; background: var(--surface); }
-  .service-grid article span { color: var(--gold); font-size: 13px; }
-  .service-grid h3 { font-size: 21px; }
-  .service-grid p { color: var(--muted); line-height: 2; }
-
-  .closing { text-align: center; padding: 90px 20px; background: #17120e; }
-  .closing p:not(.eyebrow) { color: var(--muted); margin-bottom: 30px; }
-  footer { padding: 25px; text-align: center; color: #888; font-size: 12px; border-top: 1px solid #ffffff15; }
-
-  @media (max-width: 750px) {
-    .header { flex-wrap: wrap; gap: 18px; }
-    nav { order: 3; width: 100%; justify-content: center; gap: 15px; flex-wrap: wrap; }
-    .contact-button { font-size: 12px; }
-    .hero { grid-template-columns: 1fr; padding: 65px 7%; }
-    .hero-decoration { min-height: 270px; }
-    .gold-circle { width: 220px; height: 220px; }
-    .decoration-text { font-size: 40px; }
-    .service-grid { grid-template-columns: 1fr; }
-    .intro, .services { padding: 65px 7%; }
-  }
-  
-/* قسم سابقة الأعمال */
-.portfolio {
-  padding: 90px 10%;
-  text-align: center;
-  background: #0d0c0a;
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
 }
 
-.portfolio h2 {
-  color: var(--cream);
-  font-size: 36px;
-  margin: 10px 0 15px;
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(320px, 85%);
+  height: 100vh;
+  background: #171717;
+  z-index: 9999;
+  padding: 28px 24px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  direction: rtl;
+  box-shadow: 8px 0 30px rgba(0, 0, 0, 0.25);
 }
 
-.portfolio-intro {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 2;
-  margin: 0 auto 35px;
-  max-width: 650px;
+.side-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(198, 154, 85, 0.25);
+  color: #c69a55;
+  font-size: 18px;
 }
 
-.portfolio-box {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 35px 40px;
-  text-align: right;
-  background: linear-gradient(145deg, #17130f, #0d0c0a);
-  border: 1px solid #d99a5360;
-  border-radius: 18px;
-  box-shadow: 0 15px 45px #00000050;
+.menu-close {
+  background: transparent;
+  border: 0;
+  color: #c69a55;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.portfolio-year {
-  padding: 20px 0;
-  border-bottom: 1px solid #d99a5335;
+.side-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-.portfolio-year:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.side-menu-links a {
+  display: block;
+  padding: 17px 5px;
+  color: #f5f0e6;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.2s;
 }
 
-.portfolio-year:first-child {
-  padding-top: 0;
+.side-menu-links a:hover {
+  color: #c69a55;
+  padding-right: 12px;
 }
 
-.portfolio-year h3 {
-  display: inline-block;
-  color: var(--gold);
-  font-size: 22px;
-  font-weight: 800;
-  margin: 0 0 15px;
-  padding: 5px 15px;
-  border-right: 3px solid var(--gold);
-  background: #d99a5310;
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.portfolio-year ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.side-menu.active {
+  transform: translateX(0);
 }
 
-.portfolio-year li {
-  position: relative;
-  color: #e5ded4;
-  font-size: 15px;
-  line-height: 2.1;
-  padding: 5px 22px 5px 0;
+/* ترتيب عناصر الشريط */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-.portfolio-year li::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 18px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
+.header .logo {
+  flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-  .portfolio {
-    padding: 65px 5%;
-  }
-
-  .portfolio h2 {
-    font-size: 29px;
-  }
-
-  .portfolio-box {
-    padding: 25px 20px;
-  }
-
-  .portfolio-year h3 {
-    font-size: 19px;
-  }
-
-  .portfolio-year li {
-    font-size: 14px;
-    line-height: 2;
-  }
-}
-.hero .eyebrow {
-  font-size: 20px;
+.header .language-menu {
+  flex-shrink: 0;
 }
 
-/* تحسين التوافق مع الجوال والتابلت */
-.header-buttons {
+.header .main-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.header .header-buttons {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
 }
 
-.contact-details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 25px;
-}
-
-@media (max-width: 750px) {
-  body {
-    overflow-x: hidden;
+@media (max-width: 900px) {
+  .header .main-nav {
+    display: none;
   }
 
   .header {
-    width: 100%;
-    min-height: auto;
-    padding: 14px 4%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
   }
 
-  .logo {
-    height: auto;
-    max-width: 100%;
-    gap: 8px;
-  }
-
-  .logo img {
-    width: 55px;
-    height: 65px;
-  }
-
-  .logo span {
-    white-space: normal;
-    gap: 2px;
-  }
-
-  .logo strong {
-    font-size: 13px;
-  }
-
-  .logo small {
-    font-size: 11px;
-    letter-spacing: 1px;
-  }
-
-  .header-buttons {
+  .header .logo {
     margin-right: auto;
   }
 
-  .header-buttons .contact-button {
-    padding: 9px 12px;
-    font-size: 12px;
-    white-space: nowrap;
-  }
-
-  nav {
-    order: 3;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 15px;
-    padding-top: 12px;
-    border-top: 1px solid #ffffff18;
-    font-size: 12px;
-  }
-
-  nav a {
-    padding: 4px 0;
-  }
-
-  nav .jobs-link {
-    padding: 6px 10px;
-  }
-
-  .hero {
-    min-height: auto;
-    display: block;
-    padding: 65px 6%;
-    text-align: center;
-  }
-
-  .hero .eyebrow {
-    font-size: 15px;
-  }
-
-  .hero h1 {
-    font-size: clamp(32px, 8vw, 43px);
-    line-height: 1.5;
-    margin: 18px 0;
-  }
-
-  .description {
-    font-size: 14px;
-    line-height: 2;
-    margin: 0 auto;
-  }
-
-  .hero-actions {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-top: 25px;
-  }
-
-  .intro {
-    padding: 60px 7%;
-  }
-
-  .intro h2,
-  .services h2,
-  .closing h2 {
-    font-size: 29px;
-    line-height: 1.6;
-  }
-
-  .intro p:last-child {
-    font-size: 14px;
-    line-height: 2;
-  }
-
-  .services {
-    padding: 60px 6%;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-    gap: 13px;
-    margin-top: 25px;
-  }
-
-  .service-grid article {
-    padding: 23px 20px;
-  }
-
-  .service-grid h3 {
-    font-size: 18px;
-  }
-
-  .service-grid p {
-    font-size: 13px;
-  }
-
-  .portfolio {
-    padding: 60px 5%;
-  }
-
-  .portfolio h2 {
-    font-size: 29px;
-  }
-
-  .portfolio-intro {
-    font-size: 13px;
-  }
-
-  .portfolio-box {
-    padding: 22px 15px;
-    border-radius: 12px;
-  }
-
-  .portfolio-year h3 {
-    font-size: 17px;
-  }
-
-  .portfolio-year li {
-    font-size: 13px;
-    line-height: 2;
-    padding-right: 17px;
-  }
-
-  .closing {
-    padding: 65px 6%;
-  }
-
-  .closing h2 {
-    font-size: 27px;
-  }
-
-  .contact-details {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .contact-details a {
-    width: 100%;
-    padding: 12px 10px;
-    font-size: 12px;
-    overflow-wrap: anywhere;
-  }
-
-  footer {
-    padding: 20px 12px;
-    font-size: 11px;
-    line-height: 2;
+  .header .header-buttons {
+    gap: 6px;
   }
 }
 
-@media (max-width: 380px) {
-  .logo img {
-    width: 45px;
-    height: 55px;
+@media (max-width: 520px) {
+  .header .logo strong {
+    font-size: 12px;
   }
 
-  .logo strong {
-    font-size: 11px;
+  .header .logo small {
+    font-size: 9px;
   }
 
-  .header-buttons .contact-button {
+  .header .logo img {
+    max-width: 42px;
+  }
+
+  .header .header-buttons a {
+    font-size: 10px;
     padding: 8px 9px;
-    font-size: 11px;
-  }
-
-  nav {
-    gap: 7px 11px;
-    font-size: 11px;
-  }
-
-  .hero h1 {
-    font-size: 30px;
   }
 }
 
-</style>
+.profile-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid #c99b5b;
+  border-radius: 7px;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 155, 91, 0.18),
+    rgba(201, 155, 91, 0.04)
+  );
+  color: #e6bd7b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.profile-nav:hover {
+  background: #c99b5b;
+  color: #171513;
+  box-shadow: 0 0 15px rgba(201, 155, 91, 0.3);
+  transform: translateY(-2px);
+}
+
+.profile-icon {
+  font-size: 17px;
+}
+
+/* زر التبديل بين الوضعين */
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c99b5b;
+  border-radius: 9px;
+  background: rgba(201, 155, 91, 0.12);
+  color: #e6bd7b;
+  font-size: 21px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: #c99b5b;
+  color: #171513;
+  transform: translateY(-2px);
+}
+
+/* ألوان الوضع الفاتح */
+html[data-theme="light"] {
+  --black: #f7f5f0;
+  --surface: #ffffff;
+  --gold: #a97837;
+  --cream: #30271e;
+  --muted: #756b60;
+}
+
+/* الخلفية العامة */
+html[data-theme="light"] body {
+  background: #f7f5f0;
+  color: #30271e;
+}
+
+/* الشريط العلوي */
+html[data-theme="light"] .header {
+  background: #ffffff;
+  border-bottom-color: #e8dfd1;
+}
+
+html[data-theme="light"] .logo strong {
+  color: #95652d;
+}
+
+html[data-theme="light"] .logo small {
+  color: #4b4034;
+}
+
+html[data-theme="light"] nav {
+  color: #51483d;
+}
+
+/* الأزرار */
+html[data-theme="light"] .contact-button,
+html[data-theme="light"] .gold-button {
+  background: #a97837;
+  color: #ffffff;
+}
+
+/* القسم الرئيسي */
+html[data-theme="light"] .hero {
+  background:
+    radial-gradient(
+      ellipse at 15% 45%,
+      rgba(201, 155, 91, 0.16),
+      transparent 48%
+    );
+}
+
+html[data-theme="light"] .description {
+  color: #6e6255;
+}
+
+html[data-theme="light"] .gold-circle {
+  border-color: #c99b5b;
+  box-shadow:
+    0 0 70px rgba(169, 120, 55, 0.08),
+    inset 0 0 50px rgba(169, 120, 55, 0.06);
+}
+
+/* قسم من نحن */
+html[data-theme="light"] .intro {
+  background: #eee7da;
+  color: #30271e;
+}
+
+html[data-theme="light"] .intro p:last-child {
+  color: #62584d;
+}
+
+/* الخدمات */
+html[data-theme="light"] .services {
+  background: #f7f5f0;
+}
+
+html[data-theme="light"] .service-grid article {
+  background: #ffffff;
+  border-color: #e5dac9;
+  box-shadow: 0 5px 20px rgba(65, 45, 20, 0.05);
+}
+
+html[data-theme="light"] .service-grid h3 {
+  color: #493827;
+}
+
+html[data-theme="light"] .service-grid p {
+  color: #756b60;
+}
+
+/* سابقة الأعمال */
+html[data-theme="light"] .portfolio {
+  background: #eee9df;
+}
+
+html[data-theme="light"] .portfolio h2 {
+  color: #493827;
+}
+
+html[data-theme="light"] .portfolio-box {
+  background: linear-gradient(145deg, #ffffff, #f8f4ec);
+  border-color: #d8bd95;
+  box-shadow: 0 12px 35px rgba(65, 45, 20, 0.08);
+}
+
+html[data-theme="light"] .portfolio-year {
+  border-bottom-color: #e6d8c3;
+}
+
+html[data-theme="light"] .portfolio-year li {
+  color: #51483d;
+}
+
+/* القسم الختامي */
+html[data-theme="light"] .closing {
+  background: #e9dfd0;
+  color: #30271e;
+}
+
+html[data-theme="light"] .closing p:not(.eyebrow) {
+  color: #62584d;
+}
+
+/* القائمة الجانبية */
+html[data-theme="light"] .side-menu {
+  background: #ffffff;
+  box-shadow: 8px 0 30px rgba(65, 45, 20, 0.12);
+}
+
+html[data-theme="light"] .side-menu-links a {
+  color: #493827;
+  border-bottom-color: #eee5d8;
+}
+
+html[data-theme="light"] .side-menu-header {
+  color: #95652d;
+}
+
+html[data-theme="light"] .menu-close {
+  color: #95652d;
+}
+
+/* قائمة اللغة */
+html[data-theme="light"] .language-toggle,
+html[data-theme="light"] .language-options {
+  background: #ffffff;
+  border-color: #c99b5b;
+}
+
+html[data-theme="light"] .language-options button:hover,
+html[data-theme="light"] .language-options button.active {
+  background: #f0e6d6;
+}
+
+/* بروفايل المطبخ */
+html[data-theme="light"] .profile-nav {
+  color: #805629;
+  background: rgba(201, 155, 91, 0.10);
+}
+
+/* التذييل */
+html[data-theme="light"] footer {
+  background: #ffffff;
+  color: #756b60;
+  border-top-color: #e8dfd1;
+}
+
+/* زر القائمة */
+html[data-theme="light"] .menu-toggle {
+  background: #ffffff;
+  border-color: #c99b5b;
+}
+
+/* تحسين الجوال */
+@media (max-width: 750px) {
+  html[data-theme="light"] nav {
+    border-top-color: #e8dfd1;
+  }
+}
+
+    </style>
+
+    <script>
+      import "./scripts/i18n.js";
+    </script>
+    
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
+  const sideMenu = document.getElementById("side-menu");
+  const menuOverlay = document.getElementById("menu-overlay");
+
+  function openSideMenu() {
+    sideMenu.classList.add("active");
+    menuOverlay.classList.add("active");
+    menuToggle.setAttribute("aria-expanded", "true");
+    sideMenu.setAttribute("aria-hidden", "false");
+  }
+
+  function closeSideMenu() {
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    sideMenu.setAttribute("aria-hidden", "true");
+  }
+
+  menuToggle.addEventListener("click", openSideMenu);
+  menuClose.addEventListener("click", closeSideMenu);
+  menuOverlay.addEventListener("click", closeSideMenu);
+
+  sideMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeSideMenu);
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeSideMenu();
+  });
+</script>
+
+<script>
+  // إنشاء زر الوضع الفاتح والداكن
+  const themeButton = document.createElement("button");
+
+  themeButton.type = "button";
+  themeButton.className = "theme-toggle";
+  themeButton.setAttribute("aria-label", "تغيير مظهر الموقع");
+
+  // قراءة الوضع المحفوظ
+  const savedTheme = localStorage.getItem("site-theme") || "dark";
+
+  document.documentElement.dataset.theme = savedTheme;
+
+  function updateThemeButton() {
+    themeButton.textContent =
+      document.documentElement.dataset.theme === "dark" ? "☀" : "☾";
+  }
+
+  updateThemeButton();
+
+  // وضع الزر بجوار قائمة اللغة
+  const header = document.querySelector(".header");
+  const languageMenu = header?.querySelector(".language-menu");
+  const logo = header?.querySelector(".logo");
+
+  if (languageMenu) {
+    languageMenu.insertAdjacentElement("afterend", themeButton);
+  } else if (logo) {
+    logo.insertAdjacentElement("afterend", themeButton);
+  }
+
+  // التبديل بين الوضعين
+  themeButton.addEventListener("click", () => {
+    const currentTheme = document.documentElement.dataset.theme;
+
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    document.documentElement.dataset.theme = newTheme;
+
+    localStorage.setItem("site-theme", newTheme);
+
+    updateThemeButton();
+  });
+</script>
+
+  </body>
+</html>
