@@ -88,31 +88,17 @@
   </div>
 
 
+
 <nav class="side-menu-links">
     <a href="#home" data-i18n="home">الرئيسية</a>
     <a href="#about" data-i18n="about">من نحن</a>
     <a href="#services" data-i18n="services">خدماتنا</a>
-    <a href="#portfolio" data-i18n="portfolio">سابقة أعمالنا</a>
-
-    <a href="/files/src/pages/src/pages/kitchen-profile.pdf"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="profile-nav">
-       <span class="profile-icon">▤</span>
-       <span>بروفايل المطبخ</span>
-    </a>
-
     <a href="#contact" data-i18n="contact">تواصل معنا</a>
     <a href="https://share.google/mtl7WTzxvQoWFN91m"
        target="_blank"
        rel="noopener noreferrer"
        data-i18n="location">موقعنا</a>
-
-    <a href="/request" data-i18n="request">اطلب خدمة</a>
-    <a href="/careers" data-i18n="careers">بوابة التوظيف</a>
 </nav>
-
-
 </aside>
 
 
@@ -1059,6 +1045,36 @@ html[data-theme="light"] .menu-toggle {
   }
 }
 
+/* إظهار روابط سابقة الأعمال وبروفايل المطبخ في شريط الجوال */
+@media (max-width: 900px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header .main-nav {
+    display: flex !important;
+    order: 10;
+    flex: 0 0 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    padding-top: 12px;
+    border-top: 1px solid #ffffff18;
+    font-size: 12px;
+  }
+
+  .header .main-nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .header .main-nav .profile-nav {
+    padding: 6px 12px;
+  }
+}
     </style>
 
     <script>
